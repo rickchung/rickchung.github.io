@@ -34,28 +34,25 @@ I'm a Computer Science Ph.D. student specializing in **education data mining** a
 
 # Research Projects
 
-**Student Behavior Models in Self-Assessment and Practice**
+Student Practice Models
 
-- Researched and implemented probabilistic and multilevel regression models to analyze students’ online learning/practicing behavior.
-- Improved the research design iteratively by exploratory data analyses.
+- **Student Behavior Models in Self-Assessment and Practice**
+  - Researched and implemented probabilistic and multilevel regression models to analyze students’ online learning/practicing behavior.
+  - Improved the research design iteratively by exploratory data analyses.
+- Modeling Distributed Practice Behavior by Wavelet Transform
+  - TBD
+- The Self-Explanation Effect and Distributed Practice
+  - TBD
 
-**Augmented Reality Learning Experiences for Computer Programming ([Link](https://sites.google.com/asu.edu/ogmented/home))**
+Augmented Reality Learning Experience
 
-- Designed and developed an AR-enabled mobile app by Unity and C# to deliver an AR-enabled learning experience.
-- Designed and conducted user studies to evaluate user experience by quantitative data analyses in Python.
-
-
-**Modeling Distributed Practice Behavior by Signal Processing**
-
-- TBD
-
-**Modeling Self-Explanation Effects**
-
-- TBD
-
-**Learning via Web-based Augmented Reality Programming**
-
-- TBD
+- **Augmented Reality Learning Experiences for Computer Programming ([Link](https://sites.google.com/asu.edu/ogmented/home))**
+  - Designed and developed an AR-enabled mobile app by Unity and C# to deliver an AR-enabled learning experience.
+  - Designed and conducted user studies to evaluate user experience by quantitative data analyses in Python.
+- Constructionism via Web-based Augmented Reality Programming
+  - TBD
+- Interactive Debugging Experience
+  - TBD
 
 # Publications and Papers
 
@@ -117,17 +114,24 @@ Posters
       - Developed a spatial analytical program by Scala and Apache Spark to conduct a hot zone/cell analysis
 - 2019
   - CSE545 Software Security
+    - Software reverse engineering in Ghidra, simulated CTFs
   - CSE579 Knowledge Representation
+    - Answer set programming in clingo
   - CSE535 Mobile Computing
+    - A Preliminary Investigation of Fall Detection UsingA Context-Aware Mobile App
   - CSE578 Data Visualization
+    - Topic Translation in Augmented Reality
 - 2018
   - CSE571 Artificial Intelligence
     - An AI Agent-Based on Deep Q-Learning Network in Pacman
       - Designed and built an AI agent based on the deep Q-learning network (DQN) which learns the optimal policy with the highest winning rate.
       - Experimented and tuned the DQN model to fix the over-fitting issues.
-  - CSE564 Software Design
   - CSE575 Statistical Machine Learning
+    - Exploring Semi-Supervised Learning on Spectral Waveforms Using a Sparse Autoencoder
   - CSE576 Natural Language Processing
+    - Modeling the Dynamics of the Opioid Crisis through Twitter Arizona State University
+  - CSE564 Software Design
+    - A Programmable, 3D-printed, cyber-physical Robot
 - 2017
   - CSE573 Semantic Web Mining
   - CSE591 Adaptive Web
