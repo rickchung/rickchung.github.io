@@ -44,6 +44,19 @@ I'm a Computer Science Ph.D. student specializing in **education data mining** a
 - Designed and developed an AR-enabled mobile app by Unity and C# to deliver an AR-enabled learning experience.
 - Designed and conducted user studies to evaluate user experience by quantitative data analyses in Python.
 
+
+**Modeling Distributed Practice Behavior by Signal Processing**
+
+- TBD
+
+**Modeling Self-Explanation Effects**
+
+- TBD
+
+**Learning via Web-based Augmented Reality Programming**
+
+- TBD
+
 # Publications and Papers
 
 Journals
@@ -73,6 +86,7 @@ Posters
 - 2021
   - Teaching Assistant - *CSE205 Object-Oriented Program & Data* (Spring)
 - 2020
+  - Teaching Assistant - *CPI101 Introduction to Informatics* (Fall)
   - Teaching Assistant - *CSE110 Principles of Programming* (Fall)
   - Instructor, Teaching Assistant - *CSE578 Data Visualization* (Summer)
 - 2019
@@ -87,23 +101,33 @@ Posters
 
 # Awards
 
-- 2019
-  - ...
 - 2018
+  - ASU Challenge Virtual Reality Innovation
   - CIDSE Teaching Assistant Award at Arizona State University
 
 # Coursework
 
 - 2020
-  - Developing and Analyzing a Bigtable Database (*Database Management Sys Implementation*)
-    - Researched and developed a Bigtable database model by Java.
-    - Analyzed and improved the performance of database operations.
-  - Spatial Data Analysis for a Taxi Service in Spark (*Data Processing at Scale*)
-    - Developed a spatial analytical program by Scala and Apache Spark to conduct a hot zone/cell analysis
+  - CSE510 Database Management Sys Implementation
+    - Developing and Analyzing a Bigtable Database
+      - Researched and developed a Bigtable database model by Java.
+      - Analyzed and improved the performance of database operations.
+  - CSE511 Data Processing at Scale
+    - Spatial Data Analysis for a Taxi Service in Spark
+      - Developed a spatial analytical program by Scala and Apache Spark to conduct a hot zone/cell analysis
 - 2019
-  - ...
+  - CSE545 Software Security
+  - CSE579 Knowledge Representation
+  - CSE535 Mobile Computing
+  - CSE578 Data Visualization
 - 2018
-  - An AI Agent-Based on Deep Q-Learning Network in Pacman (*Artificial Intelligence*)
-    - Designed and built an AI agent based on the deep Q-learning network (DQN) which learns the optimal policy with the highest winning rate.
-    - Experimented and tuned the DQN model to fix the over-fitting issues.
+  - CSE571 Artificial Intelligence
+    - An AI Agent-Based on Deep Q-Learning Network in Pacman
+      - Designed and built an AI agent based on the deep Q-learning network (DQN) which learns the optimal policy with the highest winning rate.
+      - Experimented and tuned the DQN model to fix the over-fitting issues.
+  - CSE564 Software Design
+  - CSE575 Statistical Machine Learning
+  - CSE576 Natural Language Processing
 - 2017
+  - CSE573 Semantic Web Mining
+  - CSE591 Adaptive Web
