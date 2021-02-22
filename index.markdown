@@ -19,18 +19,18 @@ I'm a Computer Science Ph.D. student specializing in **education data mining** a
 
 ![User Persistence Model](/assets/img/a2.png)
 
-**Fig. User Persistence Model: To Understand How Persistently a User Stays on the System**
+**Fig. User Persistence Model: Using a probabilistic model to model the students' persistent practice activity and associate the patterns to their performance.**
 
 ---
 ## > Augmented Reality
 
 ![AR Learning Experience](/assets/img/a1.jpg)
 
-**Fig. Collaborative AR Learning Experience in Computer Science: Using Augmented Reality to Present Programming Learning Content**
+**Fig. Collaborative AR Learning Experience in Computer Science: Using Augmented Reality to present programming learning content.**
 
 ![AR Data Visualization](/assets/img/dv1.png)
 
-**Fig. AR Data Visualization: Interactive SIRV Model on Mobile Devices**
+**Fig. AR Data Visualization: Interactive SIR Model on Mobile Devices**
 
 ![AR Data Visualization](/assets/img/dv2.png)
 
