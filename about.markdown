@@ -123,7 +123,7 @@ Posters
     - Topic Translation in Augmented Reality
 - 2018
   - CSE571 Artificial Intelligence
-    - An AI Agent-Based on Deep Q-Learning Network in Pacman
+    - An AI Agent Based on Deep Q-Learning Network in Pacman
       - Designed and built an AI agent based on the deep Q-learning network (DQN) which learns the optimal policy with the highest winning rate.
       - Experimented and tuned the DQN model to fix the over-fitting issues.
   - CSE575 Statistical Machine Learning
