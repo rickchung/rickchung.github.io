@@ -124,7 +124,7 @@ Augmented Reality Learning Experience
   - CIDSE Teaching Assistant Award at Arizona State University
 
 
-# Professional Developments
+# Professional Development
 
 - 2020
   - CSE510 Database Management Sys Implementation
