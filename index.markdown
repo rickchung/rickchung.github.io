@@ -8,9 +8,9 @@ layout: home
 
 TBD
 
-[>> Click here to view my CV online <<](/about/)
+<!-- [>> Click here to view my CV online <<](/about/) -->
 
-# Project Gallary
+<!-- # Project Gallary
 
 ---
 ## > User Models
@@ -43,4 +43,4 @@ TBD
 
 ![Data Visualization](/assets/img/dv3.png)
 
-**Fig. A Prototye of Sensor-based Affect Detection**
+**Fig. A Prototye of Sensor-based Affect Detection** -->
