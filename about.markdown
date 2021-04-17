@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-# Summary
+# Objective
 
-Looking for a job to apply my data mining skills in user modeling and develop computational models in human-computer interaction.
+Seeking a position to apply my data mining skills in user modeling and develop computational models in human-computer interaction.
 
 # Education
 
