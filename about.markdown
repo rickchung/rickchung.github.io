@@ -100,9 +100,9 @@ Journals
 
 # Research Experience
 
-Student Practice Models
 
-- **Student Behavior Models in Self-Assessment and Practice**
+**Student Behavior Models in Self-Assessment and Practice**
+
   - Researched and implemented probabilistic and multilevel regression models to analyze students’ online learning/practicing behavior.
   - Improved the research design iteratively by exploratory data analyses.
   - Modeling Distributed Practice Behavior by Wavelet Transform
@@ -110,7 +110,8 @@ Student Practice Models
 
 Augmented Reality Learning Experience
 
-- **Augmented Reality Learning Experiences for Computer Programming ([Link](https://sites.google.com/asu.edu/ogmented/home))**
+**Augmented Reality Learning Experiences for Computer Programming ([Link](https://sites.google.com/asu.edu/ogmented/home))**
+
   - Designed and developed an AR-enabled mobile app by Unity and C# to deliver an AR-enabled learning experience.
   - Designed and conducted user studies to evaluate user experience by quantitative data analyses in Python.
   - Constructionism via Web-based Augmented Reality Programming
