@@ -43,7 +43,7 @@ TBD
 
 # Publications
 
-## User Modeling and Educational Data Mining
+**Topic: User Modeling and Educational Data Mining**
 
 Conferences
 
@@ -61,7 +61,7 @@ Posters
 - **Chung, C.Y.**. (2019). Exploring Persistence and Regularity Behavioral Analytics in Online Self-Assessments. Proceedings of the 9th Learning Analytics and Knowledge: Companion.
 
 
-## Augmented Reality Learning Experience
+**Topic: Augmented Reality Learning Experience**
 
 Conferences
 
