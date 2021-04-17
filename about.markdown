@@ -6,7 +6,7 @@ permalink: /about/
 
 # Summary
 
-TBD
+Looking for a job to apply my data mining skills in user modeling and develop computational models in human-computer interaction.
 
 # Education
 
@@ -180,10 +180,9 @@ Augmented Reality Learning Experience
 
 # Skills
 
-- Statistical analysis and machine learning in **user behavior models**
-- Augmented Reality (AR) app development in Unity (Unity Editor, C#).
-- Deep learning models (TensorFlow, Keras)
-- Data processing at scale (Apache Spark)
-- Web development (Django, HTML/CSS, JavaScript)
-- Database management (SQL and object models)
-- General programming in Python, R, C, JavaScript, Unix/Linux shell scripts (bash, zsh)
+- Deep learning: PyTorch; TensorFlow; HF Transformers
+- Statistical analysis: Scikit-learn; NumPy; SciPy; Statsmodels
+- Natural language processing: SpaCy; NLTK; Gensim
+- Data visualization: Seaborn; Matplotlib; Plotly
+- Database and data processing: Pandas; SQL; Apache Spark; Scala
+- General Programming: Python; Java; R; JavaScript; Shell programming; C/C++
