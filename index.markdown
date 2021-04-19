@@ -6,22 +6,29 @@ layout: home
 
 # Project Gallary
 
+---
 ## > User Models
 
 ![User Persistence Model](/assets/img/a2.png)
 
 **Fig. User Persistence Model: Using a probabilistic model to model the students' persistent practice activity and associate the patterns to their performance.**
 
-
+---
 ## > Augmented Reality Experience
 
 ![Web-based AR Experience](https://media.giphy.com/media/mK4R969pndOCnqUUSH/giphy.gif)
+
+- Feel free to try the template here: [Link](https://rickchung.github.io/CPI101F20-Project-AR-Template/)
 
 **Fig. A Simplified Web-based AR template for Location and Marker Exploration**
 
 ![AR Learning Experience](/assets/img/a1.jpg)
 
-**Fig. Collaborative AR Learning Experience in Computer Science: Using Augmented Reality to present programming learning content.**
+**Fig. Collaborative AR Learning Experience in Computer Science: Using Augmented Reality to present programming learning content.** 
+
+- See the evolution of this project here: [Website](https://sites.google.com/asu.edu/ogmented/home)).
+- Published work in IEEE iLRN '20, SIGCSE '20, ACM IUI '19
+
 
 ![AR Data Visualization](/assets/img/dv1.png)
 
@@ -31,6 +38,7 @@ layout: home
 
 **Fig. Real-time Topic Translation in AR**
 
+---
 ## > Artificial Intelligence
 
 ![Deep Q-Learning](/assets/img/ai1.png)
