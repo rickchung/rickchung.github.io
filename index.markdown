@@ -12,7 +12,12 @@ layout: home
 
 **Fig. User Persistence Model: Using a probabilistic model to model the students' persistent practice activity and associate the patterns to their performance.**
 
-## > Augmented Reality
+
+## > Augmented Reality Experience
+
+![Web-based AR Experience](https://media.giphy.com/media/mK4R969pndOCnqUUSH/giphy.gif)
+
+**Fig. A Simplified Web-based AR template for Location and Marker Exploration**
 
 ![AR Learning Experience](/assets/img/a1.jpg)
 
