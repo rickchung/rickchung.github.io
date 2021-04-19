@@ -1,25 +1,20 @@
----
+
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
 ---
 
-
-TBD
-
 <!-- [>> Click here to view my CV online <<](/about/) -->
 
-<!-- # Project Gallary
+# Project Gallary
 
----
 ## > User Models
 
 ![User Persistence Model](/assets/img/a2.png)
 
 **Fig. User Persistence Model: Using a probabilistic model to model the students' persistent practice activity and associate the patterns to their performance.**
 
----
 ## > Augmented Reality
 
 ![AR Learning Experience](/assets/img/a1.jpg)
@@ -34,7 +29,6 @@ TBD
 
 **Fig. Real-time Topic Translation in AR**
 
----
 ## > Artificial Intelligence
 
 ![Deep Q-Learning](/assets/img/ai1.png)
@@ -43,4 +37,4 @@ TBD
 
 ![Data Visualization](/assets/img/dv3.png)
 
-**Fig. A Prototye of Sensor-based Affect Detection** -->
+**Fig. A Prototye of Sensor-based Affect Detection**

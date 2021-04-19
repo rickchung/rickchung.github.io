@@ -38,8 +38,6 @@ Seeking a position to apply my data mining skills in user modeling and develop c
   - Teaching Assistant - *CSE572 Data Mining* (Fall)
 
 
-<!-- # Teaching Interests -->
-
 
 # Publications
 
