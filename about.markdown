@@ -130,9 +130,11 @@ Augmented Reality Learning Experience
 
 # Honors and Awards
 
+- 2021
+  - CIDSE Outstanding Computer Science Teaching Assistant Award at Arizona State University
 - 2018
-  - ASU Challenge Virtual Reality Innovation
   - CIDSE Teaching Assistant Award at Arizona State University
+  - ASU Challenge Virtual Reality Innovation
 
 
 # Professional Development

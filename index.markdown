@@ -4,7 +4,7 @@ layout: home
 
 <!-- [>> Click here to view my CV online <<](/about/) -->
 
-# Project Gallary
+# Projects
 
 ---
 ## > Augmented Reality Experience
