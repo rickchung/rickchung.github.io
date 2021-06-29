@@ -41,40 +41,28 @@ Seeking a position to apply my data mining skills in user modeling and develop c
 
 # Publications
 
-**Topic: User Modeling and Educational Data Mining**
+2021
 
-Conferences
-
+- **Chung, C.Y** & Hsiao, I.H. (2021). Examining the Effect of Self-Explanations in Distributed Self-Assessment. EC-TEL '21. [In Press].
 - **Chung, C.Y.** & Hsiao, I.H. (2021). From Detail to Context: Modeling Distributed Practice Intensity and Timing by Multiresolution Signal Analysis. EDM '21. [In Press]. 
-- **Chung, C.Y.** & Hsiao, I.H. (2020). Investigating Patterns of Study Persistence on Self-Assessment Platform of Programming Problem-Solving. Proceedings of the 51st ACM Technical Symposium on Computer Science Education (SIGCSE). [DOI](https://doi.org/10.1145/3328778.3366827) 
-- **Chung, C.Y.** & Hsiao, I.H. (2019). Quantitative Analytics in Exploring Self-Regulated Learning Behaviors: Effects of Study Persistence and Regularity. Prceedings of 2019 Frontiers in Education Conference (FIE). [DOI](https://doi.org/10.1109/FIE43999.2019.9028665)
-- **Chung, C.Y.** & Hsiao, I. H. (2019). Chronological Semantics Modeling: A Topic Evolution Approach in Online User-Generated Medical Data. Proceedings of International Conference on Social Computing, Behavioral-Cultural Modeling and Prediction and Behavior Representation in Modeling and Simulation. Springer, Cham.
-
-Workshops
-
-- **Chung, C.Y.**., Paredes, Y. V., Alzaid, M., Papakannu, K. R., & Hsiao, I.H. (2020). A Longitudinal Study on Student Persistence in Programming Self-assessments. 2020 CSEDM Workshop.
-
-Posters
-
-- **Chung, C.Y.**. (2019). Exploring Persistence and Regularity Behavioral Analytics in Online Self-Assessments. Proceedings of the 9th Learning Analytics and Knowledge: Companion.
-
-
-**Topic: Augmented Reality Learning Experience**
-
-Conferences
-
 - **Chung, C.Y.** & Hsiao, I.H. (2021). Exploring the Effect of Augmented Reality on Verbal Communication and Code-editing Patterns in a Collaborative Programming Task. IEEE ICALT '21. [In Press].
+
+2020
+
+- **Chung, C.Y.** & Hsiao, I.H. (2020). Investigating Patterns of Study Persistence on Self-Assessment Platform of Programming Problem-Solving. Proceedings of the 51st ACM Technical Symposium on Computer Science Education (SIGCSE). [DOI](https://doi.org/10.1145/3328778.3366827) 
+- **Chung, C.Y.**., Paredes, Y. V., Alzaid, M., Papakannu, K. R., & Hsiao, I.H. (2020). A Longitudinal Study on Student Persistence in Programming Self-assessments. 2020 CSEDM Workshop.
+- **Chung, C.Y.**. (2020). Using Augmented Reality to Support Collaborative Problem-Solving in Computer Debugging Practice. Proceedings of the 51st ACM Technical Symposium on Computer Science Education (SIGCSE), 1426–1426. [DOI](https://doi.org/10.1145/3328778.3372693) 
 - **Chung, C.Y.** & Hsiao, I.H. (2020). Computational Thinking in Augmented Reality: An Investigation of Collaborative Debugging Practices. Proceedings of the 6th International Conference of the Immersive Learning Research Network (iLRN). [DOI](https://doi.org/10.23919/iLRN47897.2020.9155152) 
 
-Posters
+2019
 
-- **Chung, C.Y.**. (2020). Using Augmented Reality to Support Collaborative Problem-Solving in Computer Debugging Practice. Proceedings of the 51st ACM Technical Symposium on Computer Science Education (SIGCSE), 1426–1426. [DOI](https://doi.org/10.1145/3328778.3372693) 
+- **Chung, C.Y.** & Hsiao, I.H. (2019). Quantitative Analytics in Exploring Self-Regulated Learning Behaviors: Effects of Study Persistence and Regularity. Prceedings of 2019 Frontiers in Education Conference (FIE). [DOI](https://doi.org/10.1109/FIE43999.2019.9028665)
+- **Chung, C.Y.** & Hsiao, I. H. (2019). Chronological Semantics Modeling: A Topic Evolution Approach in Online User-Generated Medical Data. Proceedings of International Conference on Social Computing, Behavioral-Cultural Modeling and Prediction and Behavior Representation in Modeling and Simulation. Springer, Cham.
+- **Chung, C.Y.**. (2019). Exploring Persistence and Regularity Behavioral Analytics in Online Self-Assessments. Proceedings of the 9th Learning Analytics and Knowledge: Companion.
 - **Chung, C.Y.**. & Hsiao, I.H. (2019). An Exploratory Study of Augmented Embodiment for Computational Thinking. Proceedings of the 24th International Conference on Intelligent User Interfaces: Companion, 37–38. [DOI](https://doi.org/10.1145/3308557.3308676) 
 
 
 # Work Submitted
-
-Journals
 
 - **Chung, C.Y.**., Awad, N., Hsiao, I.H. (2020). Multimodal Analytics of Collaborative Programming Problem-Solving in Augmented Reality. Submitted.
 
