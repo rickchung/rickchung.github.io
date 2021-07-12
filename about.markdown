@@ -6,13 +6,18 @@ permalink: /about/
 
 # Objective
 
-Seeking a position to apply my data mining skills in user modeling and develop computational models in human-computer interaction.
+I'm on the job market now! Looking for teaching or postdoc research fellow in CSE, applied science, informatics, etc.
+
 
 # Education
 
 - 2022 (Expected)
   - Arizona State University, Tempe, AZ, U.S.A.
   - **Ph.D. in Computer Science**
+
+- 2021 (Expected)
+  - Arizona State University, Tempe, AZ, U.S.A.
+  - **M.S. in Computer Science**
 
 - 2016
   - National Sun Yat-Sun University, Kaohsiung, Taiwan
@@ -21,22 +26,25 @@ Seeking a position to apply my data mining skills in user modeling and develop c
 
 # Teaching Experiences
 
-- 2021
-  - Teaching Assistant - *CSE205 Object-Oriented Program & Data* (Spring)
-- 2020
-  - Teaching Assistant - *CPI101 Introduction to Informatics* (Fall)
-  - Teaching Assistant - *CSE110 Principles of Programming* (Fall)
-  - Instructor, Teaching Assistant - *CSE578 Data Visualization* (Summer)
-- 2019
-  - Teaching Assistant - *CPI101 Introduction to Informatics* (Fall)
-  - Teaching Assistant - *CSE110 Principles of Programming* (Spring)
-- 2018
-  - Teaching Assistant - *CSE110 Principles of Programming* (Spring, Fall)
-  - Teaching Assistant - *CSE180 Computer Literacy* (Summer)
-- 2017
-  - Teaching Assistant - *CSE110 Principles of Programming* (Fall)
-  - Teaching Assistant - *CSE572 Data Mining* (Fall)
+*2018/2021 CIDSE Outstanding Computer Science Teaching Assistant Award at Arizona State University*
 
+- 2021
+  - Teaching Assistant - *CSE578 Data Visualization* (a Chinese/English bilingual classroom)
+  - Teaching Assistant - *CSE579 Knowledge Representation and Reasoning*
+  - Teaching Assistant - *CSE205 Object-Oriented Program & Data* 
+- 2020
+  - Teaching Assistant - *CPI101 Introduction to Informatics* 
+  - Teaching Assistant - *CSE110 Principles of Programming*
+  - Instructor, Teaching Assistant - *CSE578 Data Visualization*
+- 2019
+  - Teaching Assistant - *CPI101 Introduction to Informatics*
+  - Teaching Assistant - *CSE110 Principles of Programming*
+- 2018
+  - Teaching Assistant - *CSE110 Principles of Programming*
+  - Teaching Assistant - *CSE180 Computer Literacy*
+- 2017
+  - Teaching Assistant - *CSE110 Principles of Programming*
+  - Teaching Assistant - *CSE572 Data Mining*
 
 
 # Publications
@@ -75,6 +83,9 @@ Seeking a position to apply my data mining skills in user modeling and develop c
 
 # Conference Presentations
 
+- ICALT '21.
+- EC-TEL '21
+- EDM '21. Short Paper. Virtual Event
 - SIGCSE '20. Full Paper. Virtual Event
 - CSEDM '20. Full Paper. Virtual Event
 - iLRN '20. Full Paper. Virtual Event
