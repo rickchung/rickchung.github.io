@@ -15,7 +15,7 @@ I'm on the job market now! Looking for teaching or postdoc research fellow in CS
   - Arizona State University, Tempe, AZ, U.S.A.
   - **Ph.D. in Computer Science**
 
-- 2021 (Expected)
+- 2021
   - Arizona State University, Tempe, AZ, U.S.A.
   - **M.S. in Computer Science**
 
@@ -26,7 +26,7 @@ I'm on the job market now! Looking for teaching or postdoc research fellow in CS
 
 # Teaching Experiences
 
-*2018/2021 CIDSE Outstanding Computer Science Teaching Assistant Award at Arizona State University*
+**2018/2021 CIDSE Outstanding Computer Science Teaching Assistant Award at Arizona State University**
 
 - 2021
   - Teaching Assistant - *CSE578 Data Visualization* (a Chinese/English bilingual classroom)
