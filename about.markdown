@@ -6,7 +6,7 @@ permalink: /about/
 
 # Objective
 
-I'm on the job market now! Looking for teaching or postdoc research fellow in CSE, applied science, informatics, etc.
+Looking for teaching or postdoc research fellow in CSE, applied science, informatics, etc.
 
 
 # Education
