@@ -105,8 +105,6 @@ I'm on the job market now! Looking for teaching or postdoc research fellow in CS
   - Modeling Distributed Practice Behavior by Wavelet Transform
   - The Self-Explanation Effect and Distributed Practice
 
-Augmented Reality Learning Experience
-
 **Augmented Reality Learning Experiences for Computer Programming ([Link](https://sites.google.com/asu.edu/ogmented/home))**
 
   - Designed and developed an AR-enabled mobile app by Unity and C# to deliver an AR-enabled learning experience.
@@ -123,9 +121,9 @@ Augmented Reality Learning Experience
 
 # Community Service
 
-- Reviewer and Publication/Proceedings Chairs in EDM' 21
+- Publication/Proceedings Chairs in EDM' 21
 - Proceeding Editors in LAK' 19
-
+- Reviewer in EDM '21, TAICHI '21, AIED '21, LAK '21, EDM '19, LAK '19, AIED '18, CTE '18, AIED '17
 
 # Honors and Awards
 
