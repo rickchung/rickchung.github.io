@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-[LinkedIn](https://www.linkedin.com/in/cheng-yu-chung-2294077a/) :: [Google Scholar](https://scholar.google.com/citations?user=JkNZLlcAAAAJ) :: [Instagram](https://www.instagram.com/rickjung88/)
+[LinkedIn](https://www.linkedin.com/in/cheng-yu-chung-2294077a/) :: [Google Scholar](https://scholar.google.com/citations?user=JkNZLlcAAAAJ)
 
 # Objective
 
@@ -185,3 +185,8 @@ Looking for teaching or postdoc research fellow in CSE, applied science, informa
 - Data visualization: Seaborn; Matplotlib; Plotly
 - Database and data processing: Pandas; SQL; Apache Spark; Scala
 - General Programming: Python; Java; R; JavaScript; Shell programming; C/C++
+
+# Connection
+
+[Instagram](https://www.instagram.com/rickjung88/)
+
