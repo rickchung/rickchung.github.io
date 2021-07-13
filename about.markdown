@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+[LinkedIn](https://www.linkedin.com/in/cheng-yu-chung-2294077a/) :: [Google Scholar](https://scholar.google.com/citations?user=JkNZLlcAAAAJ) :: [Instagram](https://www.instagram.com/rickjung88/)
+
 # Objective
 
 Looking for teaching or postdoc research fellow in CSE, applied science, informatics, etc.
