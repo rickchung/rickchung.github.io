@@ -8,7 +8,7 @@ permalink: /about/
 
 # Objective
 
-Looking for teaching or postdoc research fellow in CSE, applied science, informatics, etc.
+Looking for teaching or postdoc positions related to informatics and STEM education.
 
 
 # Education
@@ -51,6 +51,8 @@ Looking for teaching or postdoc research fellow in CSE, applied science, informa
 
 # Publications
 
+**Conferences**
+
 2021
 
 - **Chung, C.Y** & Hsiao, I.H. (2021). Examining the Effect of Self-Explanations in Distributed Self-Assessment. EC-TEL '21. [In Press].
@@ -72,9 +74,13 @@ Looking for teaching or postdoc research fellow in CSE, applied science, informa
 - **Chung, C.Y.**. & Hsiao, I.H. (2019). An Exploratory Study of Augmented Embodiment for Computational Thinking. Proceedings of the 24th International Conference on Intelligent User Interfaces: Companion, 37–38. [DOI](https://doi.org/10.1145/3308557.3308676) 
 
 
-# Work Submitted
+**Journals**
 
 - **Chung, C.Y.**., Awad, N., Hsiao, I.H. (2020). Multimodal Analytics of Collaborative Programming Problem-Solving in Augmented Reality. Submitted.
+
+**Collaboration**
+
+- Johnson-Glenberg MC, Jehn M, **Chung C.Y.**, Balanzat D, Nieland Zavala R, Apostol X, Rayan J, Taylor H, Kapadia A and Bartolomea H (2021) Interactive CovidCampus Simulation Game: Genesis, Design, and Outcomes. Front. Commun. 6:657756. doi: 10.3389/fcomm.2021.657756
 
 
 # Work in Progress
@@ -85,8 +91,8 @@ Looking for teaching or postdoc research fellow in CSE, applied science, informa
 
 # Conference Presentations
 
-- ICALT '21.
-- EC-TEL '21
+- EC-TEL '21. TBD.
+- ICALT '21. Short Paper. Virtual Event.
 - EDM '21. Short Paper. Virtual Event
 - SIGCSE '20. Full Paper. Virtual Event
 - CSEDM '20. Full Paper. Virtual Event
