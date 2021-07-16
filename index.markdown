@@ -16,7 +16,7 @@ layout: home
 
 ---
 
-## Collaborative ARLE for Computer Programming [Link](https://sites.google.com/asu.edu/ogmented/home))
+## Collaborative ARLE for Computer Programming ([Link](https://sites.google.com/asu.edu/ogmented/home))
 
 ![AR Learning Experience](/assets/img/a1.jpg)
 
