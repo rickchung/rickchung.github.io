@@ -14,7 +14,7 @@ layout: default
         probably looking for something about my story &#x1F914.</p>
     <p>If you are wondering what I can do, take a look at the following explorer!</p>
     <ul>
-        <li><strike>Click on a button to read an individual story</strike> (Under Development)</li>
+        <li>Click on a button to read an individual story (under development)</li>
         <li>Or hover on top of data points to see what they are.</li>
     </ul>
 </div>
@@ -22,12 +22,38 @@ layout: default
 <hr class="dotted">
 
 <div>
-    <h3>What can I do? <button>As a Software Developoer</button> <button>As a Data Scientist</button> <button>As a
-            Researcher in EDM</button> </h3>
-    <h3>What are my major experiences? <button>Softwar Development</button> <button>Research Projects</button></h3>
+    <h3>Who am I?
+        <button class="action-button" meta-target="#target-sde">As a Software Development Engineer</button>
+        <button class="action-button" meta-target="#target-ds">As a Data Scientist</button>
+        <button class="action-button" meta-target="#target-research">As a Researcher</button>
+        <button class="action-button" meta-target="RESET">As Myself (Reset)</button>
+    </h3>
 </div>
 
 <canvas id="myChart"></canvas>
+
+<div>
+    <div id="target-sde" hidden>
+        <h3>As a Software Development Engineer...</h3>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic autem voluptatem aliquid quaerat ex incidunt quos,
+        adipisci explicabo sunt error ipsa consectetur labore accusantium voluptatibus alias, soluta veritatis
+        repudiandae officia?
+    </div>
+    <div id="target-ds" hidden>
+        <h3>As a Data Scientist...</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellat officia obcaecati optio harum amet unde
+        inventore. Ipsam vitae perferendis, cum, a ex reiciendis amet consectetur ullam magni fuga pariatur.
+    </div>
+    <div id="target-research" hidden>
+        <h3>As a Researcher...</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugiat ipsum neque facere architecto
+        molestiae harum libero inventore laborum. Voluptatum mollitia dicta culpa animi, iusto deserunt obcaecati
+        aperiam placeat inventore.
+    </div>
+</div>
+
+<!-- ============================================================ -->
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
     integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
@@ -41,36 +67,36 @@ layout: default
         ['2022-05', 'Achievement', '(Expected) Ph.D. in Computer Science', 'Arizona State University, Tempe, AZ, U.S.A.', 'Education', '', ''],
         ['2021-08', 'Achievement', 'M.S. in Computer Science', 'Arizona State University, Tempe, AZ, U.S.A.', 'Education', '', ''],
         ['2016-07', 'Achievement', 'B.S. in Management Information Systems', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Education', '', ''],
-        ['2021-05', 'Achievement', 'Awarded CIDSE Outstanding Computer Science Teaching Assistant Award', 'Arizona State University, Tempe, AZ, U.S.A.', 'Award', '', ''],
-        ['2018-05', 'Achievement', 'Awarded CIDSE Outstanding Computer Science Teaching Assistant Award', 'Arizona State University, Tempe, AZ, U.S.A.', 'Award', '', ''],
-        ['2018-08', 'Achievement', 'Virtual Reality Innovation Challenge Finalists', 'Arizona State University, Tempe, AZ, U.S.A.', 'Award', '', '']
+        ['2021-05', 'Achievement', 'Awarded CIDSE Outstanding Computer Science Teaching Assistant Award', 'ASU, Tempe, AZ', 'Award', '', ''],
+        ['2018-05', 'Achievement', 'Awarded CIDSE Outstanding Computer Science Teaching Assistant Award', 'ASU, Tempe, AZ', 'Award', '', ''],
+        ['2018-08', 'Achievement', 'Virtual Reality Innovation Challenge Finalists', 'ASU, Tempe, AZ', 'Award', '', '']
     ];
     const data_proj = [
         ['2020-05', 'Project', 'Developed and Analyzed a Bigtable Database', 'ASU CSE510 Database Management Sys Implementation', 'Featured Project', 'java,sql,relational database,big data,project management', ''],
         ['2020-05', 'Project', 'Conducted Spatial Data Analysis for a Taxi Service in Spark', 'ASU CSE511 Data Processing at Scale', 'Course Project', 'spark,scala,big data,scale,sql', ''],
         ['2019-12', 'Project', 'Participated in Various Software Security Projects: Reverse Engineering in Ghidra, Simulated CTFs', 'ASU CSE545 Software Security', 'Course Project', 'shell,c,security,ctf,software security,ghidra', ''],
-        ['2019-12', 'Project', 'Developed an ASP for Warehouse Delivery Logistics', 'ASU CSE579 Knowledge Representation', 'Course Project', 'clingo,answer set programming,python', ''],
-        ['2019-05', 'Project', 'Developed a Context-Aware Mobile App for Fall Detection ', 'ASU CSE535 Mobile Computing', 'Course Project', 'android,java', ''],
+        ['2019-12', 'Project', 'Developed an ASP for Warehouse Delivery Logistics', 'ASU CSE579 Knowledge Representation', 'Course Project', 'clingo,answer set programming,python,artificial intelligence', ''],
+        ['2019-05', 'Project', 'Developed a Context-Aware Mobile App for Fall Detection ', 'ASU CSE535 Mobile Computing', 'Course Project', 'android,java,machine learning', ''],
         ['2019-05', 'Project', 'Developed Topic Translation in Augmented Reality', 'ASU CSE578 Data Visualization', 'Course Project', 'python,c#,unity,augmented reality,natural language processing,data visualization,', ''],
-        ['2018-12', 'Project', 'Developed AI Agent Based on Deep Q-Learning Network in Pacman', 'ASU CSE571 Artificial Intelligence', 'Featured Project', 'python,ai,deep learning,reinfircement learning,machine learning,q learning', ''],
+        ['2018-12', 'Project', 'Developed AI Agent Based on Deep Q-Learning Network in Pacman', 'ASU CSE571 Artificial Intelligence', 'Featured Project', 'python,artificial intelligence,deep learning,reinfircement learning,machine learning,q learning', ''],
         ['2018-05', 'Project', 'Developed and Researched a Semi-Supervised Learning Approach for Spectral Waveforms', 'ASU CSE575 Statistical Machine Learning', 'Course Project', 'python,autoencoder,machine learning', ''],
-        ['2018-05', 'Project', 'Modeled the Dynamics of the Opioid Crisis through Twitter Arizona State University', 'ASU CSE576 Natural Language Processing', 'Course Project', 'python,natural language processing,svm', ''],
+        ['2018-05', 'Project', 'Modeled the Dynamics of the Opioid Crisis through Twitter Arizona State University', 'ASU CSE576 Natural Language Processing', 'Course Project', 'python,natural language processing,svm,machine learning', ''],
         ['2018-12', 'Project', 'Developed a Programmable, 3D-printed, Cyber-physical Robot', 'ASU CSE564 Software Design', 'Course Project', 'c,3d printer', ''],
-        ['2020-12', 'Project', 'Developed a Web-based Augmented Reality Template', 'Arizona State University, Tempe, AZ, U.S.A.', 'Research Project', 'a-frame,arjs,augmented reality,html/css,javascript', ''],
-        ['2020-10', 'Project', 'Developed a Mobile SEIR Data Visualization', 'Arizona State University, Tempe, AZ, U.S.A.', 'Side Project', 'seir,data visualization,python,c#,unity', ''],
-        ['2016-03', 'Project', 'Designed a Tutorial - Introduction to Python Programming', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Side Project', 'python,tutorial', ''],
-        ['2015-08', 'Project', 'Engineered a Personal Emotion Assistant based on Biosensors', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Featured Project', 'python,django,php,html/css,javascript,android,java,arduino,sensors', ''],
-        ['2016-01', 'Project', 'Conducted a Trend Analysis on a Discussion Forum', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Course Project', 'python,scrapy', ''],
-        ['2013-05', 'Project', 'Developed a Game in Python - Space Invador', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Course Project', 'python,pygame', ''],
-        ['2014-12', 'Project', 'Engineered a C Shell for Operating Systems', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Course Project', 'c,linux', ''],
-        ['2014-03', 'Project', 'Developed an Online Lottery Drawer', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Side Project', 'html/css,javascript', ''],
-        ['2014-09', 'Project', 'Developed a Course Selection System', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Side Project', 'html/css,php,javascript', ''],
-        ['2016-03', 'Project', 'Developoed a Multiplayer Bluetooth Android Game', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Course Project', 'java,android,bluetooth,network programming', ''],
-        ['2016-04', 'Project', 'Joined a Hackathon and Developed a Fishing Information System on Mobile', 'Taiwan', 'Side Project', 'java,android,python,django', ''],
-        ['2016-07', 'Project', 'Developed Android Wallpaper Generator', 'National Sun Yat-Sun University, Kaohsiung, Taiwan', 'Course Project', 'java,android', ''],
-        ['2019-12', 'Project', 'Developed a Prototype for Collaborative Problem Solving in Augmented Reality', 'Arizona State University, Tempe, AZ, U.S.A.', 'Featured Project', 'c#,unity,augmented reality,network programming', ''],
-        ['2018-04', 'Project', 'Developed a Prototype for Embodiment and Debugging Practice in Augmented Reality', 'Arizona State University, Tempe, AZ, U.S.A.', 'Research Project', 'c#,unity,augmented reality,embodied learning', ''],
-        ['2017-12', 'Project', 'Developed a Prototype for Learning Abstraction in Computing via Augmented Reality', 'Arizona State University, Tempe, AZ, U.S.A.', 'Research Project', 'c#,unity,augmented reality,embodied learning', '']
+        ['2020-12', 'Project', 'Developed a Web-based Augmented Reality Template', 'ASU, Tempe, AZ', 'Research Project', 'a-frame,arjs,augmented reality,html/css,javascript', ''],
+        ['2020-10', 'Project', 'Developed a Mobile SEIR Data Visualization', 'ASU, Tempe, AZ', 'Side Project', 'seir,data visualization,python,c#,unity', ''],
+        ['2016-03', 'Project', 'Designed a Tutorial - Introduction to Python Programming', 'NSYSU, TW', 'Side Project', 'python,tutorial', ''],
+        ['2015-08', 'Project', 'Engineered a Personal Emotion Assistant based on Biosensors', 'NSYSU, TW', 'Featured Project', 'python,django,php,html/css,javascript,android,java,arduino,sensors,sql,artificial intelligence', ''],
+        ['2016-01', 'Project', 'Conducted a Trend Analysis on a Discussion Forum', 'NSYSU E-Commerce', 'Course Project', 'python,scrapy', ''],
+        ['2013-05', 'Project', 'Developed a Game in Python - Space Invador', 'NSYSU Principles of Computing', 'Course Project', 'python,pygame', ''],
+        ['2014-12', 'Project', 'Engineered a C Shell for Operating Systems', 'NSYSU Operating Systems', 'Course Project', 'c,linux', ''],
+        ['2014-03', 'Project', 'Developed an Online Lottery Drawer', 'NSYSU Database Management', 'Side Project', 'html/css,javascript', ''],
+        ['2014-09', 'Project', 'Developed a Course Selection System', 'NSYSU, TW', 'Side Project', 'html/css,php,javascript,sql', ''],
+        ['2016-03', 'Project', 'Developoed a Multiplayer Bluetooth Android Game', 'NSYSU Business Comm & Network', 'Course Project', 'java,android,bluetooth,network programming', ''],
+        ['2016-04', 'Project', 'Joined a Hackathon and Developed a Fishing Information System on Mobile', 'TW', 'Side Project', 'java,android,python,django', ''],
+        ['2016-07', 'Project', 'Developed Android Wallpaper Generator', 'NSYSU, TW', 'Course Project', 'java,android', ''],
+        ['2019-12', 'Project', 'Developed a Prototype for Collaborative Problem Solving in Augmented Reality', 'ASU, Tempe, AZ', 'Featured Project', 'c#,unity,augmented reality,network programming', ''],
+        ['2018-04', 'Project', 'Developed a Prototype for Embodiment and Debugging Practice in Augmented Reality', 'ASU, Tempe, AZ', 'Research Project', 'c#,unity,augmented reality,embodied learning', ''],
+        ['2017-12', 'Project', 'Developed a Prototype for Learning Abstraction in Computing via Augmented Reality', 'ASU, Tempe, AZ', 'Research Project', 'c#,unity,augmented reality,embodied learning', '']
     ];
     const data_pub = [
         ['2021-07', 'Publication', 'Augmented Reality in a Collaborative Programming Task', "IEEE ICALT '21", 'Conference', '', ''],
@@ -88,8 +114,19 @@ layout: default
         ['2021', 'Publication', 'Interactive CovidCampus Simulation Game: Genesis, Design, and Outcomes', 'Front. Commun', 'Collaboration', '', '']
     ];
     const data_work = [
-        ['2017-08', 'Work', 'Researched and developed a content recommendar by TensorFlow', 'Data Science Intern at Dcard, Taipei, Taiwan', 'Paid Work', 'python,tensorflow,recommendation systems', ''],
-        ['2017-02', 'Work', 'Developed an Online 3D Model Viewer', 'Taiwan', 'Paid Work', 'javascript,3d models,html/css', '']
+        ['2017-08', 'Work', 'Researched and developed a content recommendar by TensorFlow', 'Data Science Intern at Dcard, Taipei, Taiwan', 'Paid Work', 'python,machine learning,tensorflow,recommendation systems', ''],
+        ['2017-02', 'Work', 'Developed an Online 3D Model Viewer', 'TW', 'Paid Work', 'javascript,3d models,html/css', ''],
+        ['2017', 'Work', 'TA - CSE572 Data Mining', 'ASU, Tempe, AZ', 'Paid Work', '', ''],
+        ['2017', 'Work', 'TA - CSE110 Principles of Programming (Java)', 'ASU, Tempe, AZ', 'Paid Work', 'java', ''],
+        ['2018', 'Work', 'TA - CSE110 Principles of Programming (Java)', 'ASU, Tempe, AZ', 'Paid Work', 'java', ''],
+        ['2018', 'Work', 'TA/Instructor - CSE180 Computer Literacy', 'ASU, Tempe, AZ', 'Paid Work', '', ''],
+        ['2019', 'Work', 'TA - CSE110 Principles of Programming (Java)', 'ASU, Tempe, AZ', 'Paid Work', 'java', ''],
+        ['2019', 'Work', 'TA - CPI101 Introduction to Informatics', 'ASU, Tempe, AZ', 'Paid Work', '', ''],
+        ['2020', 'Work', 'TA - CSE110 Principles of Programming (Java)', 'ASU, Tempe, AZ', 'Paid Work', 'java', ''],
+        ['2020', 'Work', 'TA/Instructor - CSE578 Data Visualization', 'ASU, Tempe, AZ', 'Paid Work', '', ''],
+        ['2021', 'Work', 'TA - CSE205 Object-Oriented Program & Data (Java)', 'ASU, Tempe, AZ', 'Paid Work', 'java', ''],
+        ['2021', 'Work', 'TA - CSE579 Knowledge Representation and Reasoning', 'ASU, Tempe, AZ', 'Paid Work', 'artifical intelligence', ''],
+        ['2021', 'Work', 'TA - CSE578 Data Visualization (Mandarin/English Bilingual)', 'ASU, Tempe, AZ', 'Paid Work', '', '']
     ];
     const data_other = [
         ['2021-07', 'Other', 'Publication/Proceedings Chair', "EDM '21", 'Service', '', ''],
@@ -134,6 +171,7 @@ layout: default
                 details: element[2],
                 location: element[3],
                 keywords: element[5],
+                keywords_array: element[5].split(','),
                 ref: element[6],
             });
         });
@@ -147,13 +185,14 @@ layout: default
         };
         return dataset1
     };
-    const datasets = [
+    const init_datasets = [
         create_dataset(data_achieve, LAB_ACHIEVE),
         create_dataset(data_pub, LAB_PUB),
         create_dataset(data_other, LAB_OTHER),
         create_dataset(data_proj, LAB_PROJ),
         create_dataset(data_work, LAB_WORK),
     ];
+    const init_ylabels = ['Education', 'Award', 'Paid Work', 'Service', 'Journal', 'Collaboration', 'Conference', 'Featured Project', 'Research Project', 'Course Project', 'Side Project'];
 
     // Customized tooltip content
 
@@ -188,7 +227,7 @@ layout: default
 
     // Default setup
 
-    const data = { datasets: datasets };
+    const data = { datasets: init_datasets };
     const config = {
         type: 'line',
         data: data,
@@ -235,7 +274,7 @@ layout: default
                     grid: {
                         lineWidth: 2,
                     },
-                    labels: ['Education', 'Award', 'Paid Work', 'Service', 'Journal', 'Collaboration', 'Conference', 'Featured Project', 'Research Project', 'Course Project', 'Side Project']
+                    labels: init_ylabels
                 }
             },
             plugins: {
@@ -243,6 +282,7 @@ layout: default
                     callbacks: tooltip_callbacks,
                     position: 'fixed',
                     caretSize: 0,
+                    backgroundColor: 'rgba(0,0,0,0.65)',
                 },
                 legend: {
                     position: 'bottom',
@@ -258,16 +298,189 @@ layout: default
     var context = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(context, config);
 
-    const actions = [
-        {
-            name: 'Step: false (default)',
-            handler: (chart) => {
-                chart.data.datasets.forEach(dataset => {
-                    dataset.stepped = false;
-                });
-                chart.update();
-            }
-        },
-    ];
 
+</script>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+
+    const original_datasets = init_datasets;
+    const original_ylabels = init_ylabels;
+    const chart = myChart;
+    const original_xmin = chart.config.options.scales.x.min;
+
+    function clone_dataset_attrs(dataset) {
+        return {
+            label: dataset.label,
+            borderColor: dataset.borderColor,
+            backgroundColor: dataset.backgroundColor,
+            pointBackgroundColor: dataset.pointBackgroundColor,
+            pointRadius: dataset.pointRadius,
+        };
+    }
+
+    function get_data_by_keywords(data_array, keyword, redefine_y = false) {
+        var dup_array = [];
+        data_array.forEach((element) => {
+            if (element.keywords_array.includes(keyword)) {
+                // This makes a shallow copy, but it's fine because element contains only strings.
+                dup_array.push(Object.assign({}, element));
+            }
+        });
+        if (redefine_y) {
+            dup_array.forEach((e) => { e.y = keyword; });
+        }
+        return dup_array;
+    }
+
+    function get_data_by_subcategory(data_array, subcategory, redefined_yval = undefined) {
+        var dup_array = [];
+        data_array.forEach((element) => {
+            if (element.y.includes(subcategory)) {
+                // This makes a shallow copy, but it's fine because element contains only strings.
+                dup_array.push(Object.assign({}, element));
+            }
+            if (redefined_yval) {
+                dup_array.forEach((e) => { e.y = redefined_yval; });
+
+            }
+        });
+        return dup_array;
+    }
+
+    function get_dataset_by_category(category) {
+        switch (category) {
+            case LAB_ACHIEVE:
+                return original_datasets[0];
+                break;
+            case LAB_PUB:
+                return original_datasets[1];
+                break;
+            case LAB_OTHER:
+                return original_datasets[2];
+                break;
+            case LAB_PROJ:
+                return original_datasets[3];
+                break;
+            case LAB_WORK:
+                return original_datasets[4];
+                break;
+            default:
+                return [];
+                break;
+        }
+    }
+
+    function vis_story(target) {
+        var new_datasets = [];
+        switch (target) {
+            case "#target-sde":
+                // Category: PR, WO
+                // Keywords: python, java, c#, html/css, android
+                var ref_datasets = [get_dataset_by_category(LAB_PROJ), get_dataset_by_category(LAB_WORK)];
+                ref_datasets.forEach((dataset) => {
+                    var new_dataset = clone_dataset_attrs(dataset);
+                    var new_data = [];
+                    new_data.push(...get_data_by_keywords(dataset.data, "python", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "java", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "javascript", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "c#", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "html/css", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "android", true));
+                    // Save the new dataset
+                    new_dataset.data = new_data;
+                    new_datasets.push(new_dataset);
+                });
+
+                chart.data.datasets = new_datasets;
+                chart.config.options.scales.x.min = original_xmin;
+                chart.config.options.scales.y.title.text = 'Skill'
+                chart.config.options.scales.y.title.display = true;
+                chart.config.options.scales.y.labels = ['python', 'java', 'javascript', 'c#', 'html/css', 'android'];
+                chart.update()
+                break;
+            case "#target-ds":
+                // Category: PR, WO, PU
+                var ref_datasets = [get_dataset_by_category(LAB_PROJ), get_dataset_by_category(LAB_WORK), get_dataset_by_category(LAB_PUB)];
+                // Keywords: python, sql, machine learning
+                // Sub-category: Research Project
+
+                ref_datasets.forEach((dataset) => {
+                    var new_dataset = clone_dataset_attrs(dataset);
+                    var new_data = [];
+                    new_data.push(...get_data_by_keywords(dataset.data, "python", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "sql", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "machine learning", true));
+                    new_data.push(...get_data_by_keywords(dataset.data, "spark", true));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Research Project"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Conference", "Publication"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Journal", "Publication"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Collaboration", "Publication"));
+                    // Save the new dataset
+                    new_dataset.data = new_data;
+                    new_datasets.push(new_dataset);
+                });
+
+                chart.data.datasets = new_datasets;
+                chart.config.options.scales.x.min = original_xmin;
+                chart.config.options.scales.y.title.text = 'Related Experience/Skill';
+                chart.config.options.scales.y.title.display = true;
+                chart.config.options.scales.y.labels = ['Publication', 'Research Project', 'machine learning', 'python', 'sql'];
+                chart.update()
+                break;
+            case "#target-research":
+                // Category: AC, PU, OT
+                // Sub-category: Research Project, Service
+
+                var ref_datasets = original_datasets;
+
+                ref_datasets.forEach((dataset) => {
+                    var new_dataset = clone_dataset_attrs(dataset);
+                    var new_data = [];
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Research Project"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Service"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Journal"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Conference"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Collaboration"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Award"));
+                    // Save the new dataset
+                    new_dataset.data = new_data;
+                    new_datasets.push(new_dataset);
+                });
+
+                chart.data.datasets = new_datasets;
+                chart.config.options.scales.x.min = "2016";
+                chart.config.options.scales.y.title.text = 'Related Experience';
+                chart.config.options.scales.y.title.display = true;
+                chart.config.options.scales.y.labels = ['Conference', 'Collaboration', 'Journal', 'Award', 'Research Project', 'Service'];
+
+
+                chart.update()
+                break;
+            default:
+                console.info('Reset the story');
+                chart.data.datasets = original_datasets;
+                chart.config.options.scales.x.min = original_xmin;
+                chart.config.options.scales.y.labels = original_ylabels;
+                chart.config.options.scales.y.title.text = undefined;
+                chart.config.options.scales.y.title.display = false;
+                chart.update();
+                break;
+        }
+    }
+
+    var prev_target = null;
+    $(".action-button").click((event) => {
+        var target = $(event.target).attr('meta-target');
+        var target_obj = $(target);
+        if (prev_target != null)
+            prev_target.hide();
+        if (target !== 'RESET') {
+            target_obj.toggle();
+            prev_target = target_obj;
+        }
+        vis_story(target);
+    });
 </script>
