@@ -139,7 +139,8 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
   - CIDSE Outstanding Computer Science Teaching Assistant Award at Arizona State University
 - 2018
   - CIDSE Teaching Assistant Award at Arizona State University
-  - ASU Challenge Virtual Reality Innovation
+  - ASU Virtual Reality Innovation Challenge Finalists
+
 
 
 # Professional Development
@@ -169,7 +170,7 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
   - CSE575 Statistical Machine Learning
     - Exploring Semi-Supervised Learning on Spectral Waveforms Using a Sparse Autoencoder
   - CSE576 Natural Language Processing
-    - Modeling the Dynamics of the Opioid Crisis through Twitter Arizona State University
+    - Modeling the Dynamics of the Opioid Crisis through Twitter
   - CSE564 Software Design
     - A Programmable, 3D-printed, cyber-physical Robot
 - 2017
