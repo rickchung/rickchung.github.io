@@ -424,7 +424,7 @@ layout: default
                         new_data.push(...t);
                         kw_counts[i] += t.length;
                     })
-                    new_data.push(...get_data_by_subcategory(dataset.data, "Research Project"));
+                    new_data.push(...get_data_by_subcategory(dataset.data, "Research"));
                     subcats.forEach((k) => {
                         new_data.push(...get_data_by_subcategory(dataset.data, k, "Publication"));
                     })
@@ -435,11 +435,11 @@ layout: default
 
                 // update_story_states(statchart_ds, kws, kw_counts);
 
-                vis_routine1(new_datasets, "Related Experience", ['Publication', 'Research Project'].concat(kws), original_xmin);
+                vis_routine1(new_datasets, "Related Experience", ['Publication', 'Research'].concat(kws), original_xmin);
 
                 break;
             case "#target-research":
-                var subcats = ['Research Project', 'Journal', 'Conference', 'Collaboration', 'Award', 'Service'];
+                var subcats = ['Research', 'Journal', 'Conference', 'Collaboration', 'Award', 'Service'];
                 var ref_datasets = original_datasets;
                 ref_datasets.forEach((dataset) => {
                     var new_dataset = clone_dataset_attrs(dataset);

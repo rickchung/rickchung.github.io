@@ -31,6 +31,4 @@ out = {
 with open('timeline_data.json', 'w+') as fout:
     json.dump(out, fout)
 
-
-
 # %%
