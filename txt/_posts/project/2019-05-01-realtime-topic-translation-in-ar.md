@@ -6,4 +6,18 @@ tags: sdefeature ar course
 
 ![AR Data Visualization](/assets/img/dv2.png) 
 
-...TBA
+# Introduction
+
+TBA
+
+# Design and Implementation
+
+TBA
+
+# Results and Conclusions
+
+TBA
+
+# Demonstrated Skills
+
+TBA

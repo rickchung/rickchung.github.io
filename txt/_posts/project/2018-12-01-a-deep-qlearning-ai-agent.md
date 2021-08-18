@@ -6,4 +6,18 @@ tags: sdefeature course
 
 ![Deep Q-Learning](/assets/img/ai1.png)
 
-...TBA.
+# Introduction
+
+TBA
+
+# Design and Implementation
+
+TBA
+
+# Results and Conclusions
+
+TBA
+
+# Demonstrated Skills
+
+TBA

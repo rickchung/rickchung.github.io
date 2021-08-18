@@ -6,4 +6,14 @@ tags: sdefeature ar research
 
 ![AR Data Visualization](/assets/img/dv1.png)
 
-...TBA
+# Design and Implementation
+
+TBA
+
+# Results and Conclusions
+
+TBA
+
+# Demonstrated Skills
+
+TBA
