@@ -9,40 +9,48 @@ layout: default
     }
 </style>
 
+<!-- My Abstract -->
+
 <div>
-    <p>Hi there! I'm Cheng-Yu and a senior PhD student in Computer Science at Arizona State University. If you are here,
-        I guess you are
-        probably looking for something about my story &#x1F914.</p>
+    <p>Hi there! I'm Cheng-Yu and a PhD in Computer Science.</p>
 </div>
 
 <hr class="dotted">
 
+<!-- Chart Control Panel -->
+
 <div>
-    <h3>Who am I?
-        <button class="action-button" meta-target="#target-sde">As a Software Developer</button>
-        <button class="action-button" meta-target="#target-ds">As a Data Scientist</button>
-        <button class="action-button" meta-target="#target-research">As a Researcher</button>
-        <button class="action-button" meta-target="#RESET">As a Human</button>
-    </h3>
+    <h1>
+        Who I Am <br />
+        <button class="action-button" meta-target="#target-sde">Software Developer</button>
+        <button class="action-button" meta-target="#target-research">Researcher</button>
+        <button class="action-button" meta-target="#RESET">All Professional Experienes</button>
+    </h1>
 </div>
 
-<canvas id="myChart"></canvas>
+<!-- Chart Placeholder -->
 
 <div>
+    <h1>Achievements</h1>
+    <canvas id="myChart"></canvas>
+</div>
+
+<!-- Chart Tabs -->
+
+<div>
+    <!-- Software developer -->
     <div id="target-sde" hidden>
-        <h3>As a Software Developer...</h3>
+        <h2>As a Software Developer</h2>
         <table>
             <tr>
                 <td>
                     <p>
-                        I have been in my journey of software development since I was an undergraduate back to 2013,
-                        where I specifically focused a lot on web applications and mobile apps (full-stack development).
-                        As I moved on to my graduate program (2017), my development experience started focusing more on
-                        data processing and statistical analysis (Python) due to the need of my research
-                        work. Meanwhile, I also assisted in undergraduate/graduate coureses that focused on
-                        object-oriented programming (Java) and data visualization (Python), which equipped me with the
-                        ability to collaborate with people from a variety of backgrounds (science, non-science) and
-                        leves of experience.
+                    <ul>
+                        <li>Developed software since 2013</li>
+                        <li>Focused on web applications, mobile apps at the beginning</li>
+                        <li>Moved onto data processing and statistical analysis</li>
+                        <li>Collaborated with people from a variety of backgrounds and levels of experience </li>
+                    </ul>
                     </p>
                 </td>
                 <td>
@@ -58,18 +66,14 @@ layout: default
             </tr>
         </table>
     </div>
-    <div id="target-ds" hidden>
-        <h3>As a Data Scientist...</h3>
-        <p>I'm still writing my story here. Sorry for the inconvenience &#x1F613</p>
-        <!-- <canvas id="chart-ds"></canvas> -->
-    </div>
+    <!-- Researcher -->
     <div id="target-research" hidden>
-        <h3>As a Researcher...</h3>
-        <p>I'm still writing my story here. Sorry for the inconvenience &#x1F613</p>
+        <!-- <h3>As a Researcher...</h3>
+        <p>I'm still writing my story here. Sorry for the inconvenience &#x1F613</p> -->
     </div>
     <div id="RESET" hidden>
-        <h3>As a Human...</h3>
-        <p>I'm still writing my story here. Sorry for the inconvenience &#x1F613</p>
+        <!-- <h3>As a Human...</h3>
+        <p>I'm still writing my story here. Sorry for the inconvenience &#x1F613</p> -->
     </div>
 </div>
 
@@ -84,6 +88,7 @@ layout: default
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@0.2.1"></script>
 
 <script>
+    // Obtain data from the _data folder
     const data_achieve = {{ site.data.timeline_data.ac | jsonify  }};
     const data_proj = {{ site.data.timeline_data.pr | jsonify  }};
     const data_pub = {{ site.data.timeline_data.pu | jsonify  }};
@@ -282,6 +287,7 @@ layout: default
 
 </script>
 
+<!-- Utility functions -->
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <script>
@@ -468,13 +474,23 @@ layout: default
     }
 
     var prev_target = null;
-    $(".action-button").click((event) => {
-        var target = $(event.target).attr('meta-target');
+    function action_button_onclidk(target) {
         var target_obj = $(target);
+
         if (prev_target != null)
             prev_target.hide();
         target_obj.toggle();
         prev_target = target_obj;
+
         vis_story(target);
-    });
+    }
+
+    function init() {
+        $(".action-button").click((event) => {
+            var target = $(event.target).attr('meta-target');
+            action_button_onclidk(target);
+        });
+        action_button_onclidk("#target-sde");
+    }
+    init();
 </script>

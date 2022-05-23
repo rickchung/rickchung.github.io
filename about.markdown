@@ -8,14 +8,14 @@ permalink: /about/
 
 # Objective
 
-Looking for teaching or postdoc positions related to informatics and STEM education.
-
+TBD
 
 # Education
 
-- 2022 (Expected)
+- 2022
   - Arizona State University, Tempe, AZ, U.S.A.
   - **Ph.D. in Computer Science**
+  - Dissertation: *AI-assisted Programming Question Generation: Constructing Semantic Networks of Programming Knowledge by Local Knowledge Graph and Abstract Syntax Tree*
 
 - 2021
   - Arizona State University, Tempe, AZ, U.S.A.
@@ -51,13 +51,29 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
 
 # Publications
 
-**Conferences**
+**Journals**
+
+2022
+
+- Hsiao, I.H. and **Chung, C.Y.** (2022). AI-Infused Semantic Model to Enrich and Expand Programming Question Generation. Journal of Artificial Intelligence and Technology 2 (2), 47-54. [DOI](https://doi.org/10.37965/jait.2022.0090)
 
 2021
 
-- **Chung, C.Y** & Hsiao, I.H. (2021). Examining the Effect of Self-Explanations in Distributed Self-Assessment. EC-TEL '21. [In Press].
-- **Chung, C.Y.** & Hsiao, I.H. (2021). From Detail to Context: Modeling Distributed Practice Intensity and Timing by Multiresolution Signal Analysis. EDM '21. [In Press]. 
-- **Chung, C.Y.** & Hsiao, I.H. (2021). Exploring the Effect of Augmented Reality on Verbal Communication and Code-editing Patterns in a Collaborative Programming Task. IEEE ICALT '21. [In Press].
+- **Chung, C.Y.**., Awad, N., Hsiao, I.H. (2021). Collaborative programming problem-solving in augmented reality: Multimodal analysis of effectiveness and group collaboration. Australasian Journal of Educational Technology 37 (5), 17-31. [DOI](https://doi.org/10.14742/ajet.7059)
+- Johnson-Glenberg MC, Jehn M, **Chung C.Y.**, Balanzat D, Nieland Zavala R, Apostol X, Rayan J, Taylor H, Kapadia A and Bartolomea H (2021) Interactive CovidCampus Simulation Game: Genesis, Design, and Outcomes. Front. Commun. 6:657756. [DOI](https://doi.org/10.3389/fcomm.2021.657756)
+
+**Conferences**
+
+2022
+
+- **Chung, C.Y** & Hsiao, I.H. (2022). Semantic Modeling of Programming Practices with Local Knowledge Graphs: The Effects of Question Complexity on Student Performance. In Press.
+- **Chung, C.Y** & Hsiao, I.H. (2022). Programming Question Generation by a Semantic Network: A Preliminary User Study with Experienced Instructors. In Press.
+
+2021
+
+- **Chung, C.Y** & Hsiao, I.H. (2021). Examining the Effect of Self-Explanations in Distributed Self-Assessment. EC-TEL '21. [DOI](https://doi.org/10.1007/978-3-030-86436-1_12).
+- **Chung, C.Y.** & Hsiao, I.H. (2021). From Detail to Context: Modeling Distributed Practice Intensity and Timing by Multiresolution Signal Analysis. EDM '21. [LINK](https://eric.ed.gov/?id=ED615515). 
+- **Chung, C.Y.** & Hsiao, I.H. (2021). Exploring the Effect of Augmented Reality on Verbal Communication and Code-editing Patterns in a Collaborative Programming Task. IEEE ICALT '21. [DOI](https://doi.org/10.1109/ICALT52272.2021.00126).
 
 2020
 
@@ -73,20 +89,12 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
 - **Chung, C.Y.**. (2019). Exploring Persistence and Regularity Behavioral Analytics in Online Self-Assessments. Proceedings of the 9th Learning Analytics and Knowledge: Companion.
 - **Chung, C.Y.**. & Hsiao, I.H. (2019). An Exploratory Study of Augmented Embodiment for Computational Thinking. Proceedings of the 24th International Conference on Intelligent User Interfaces: Companion, 37–38. [DOI](https://doi.org/10.1145/3308557.3308676) 
 
-
-**Journals**
-
-- **Chung, C.Y.**., Awad, N., Hsiao, I.H. (2020). Multimodal Analytics of Collaborative Programming Problem-Solving in Augmented Reality. Submitted.
-
-**Collaboration**
-
-- Johnson-Glenberg MC, Jehn M, **Chung C.Y.**, Balanzat D, Nieland Zavala R, Apostol X, Rayan J, Taylor H, Kapadia A and Bartolomea H (2021) Interactive CovidCampus Simulation Game: Genesis, Design, and Outcomes. Front. Commun. 6:657756. doi: 10.3389/fcomm.2021.657756
-
+<!-- 
 
 # Work in Progress
 
 - Interactive, adaptive tutorial of programming content by automatic question generation
-- Student-in-the-loop question generation chatbots 
+- Student-in-the-loop question generation chatbots  -->
 
 
 # Conference Presentations
@@ -103,7 +111,7 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
 - IUI '19. Poster. Los Angeles, CA
 
 
-# Research Experience
+<!-- # Research Experience
 
 
 **Student Behavior Models in Self-Assessment and Practice**
@@ -118,7 +126,7 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
   - Designed and developed an AR-enabled mobile app by Unity and C# to deliver an AR-enabled learning experience.
   - Designed and conducted user studies to evaluate user experience by quantitative data analyses in Python.
   - Constructionism via Web-based Augmented Reality Programming
-  - Interactive Debugging Experience
+  - Interactive Debugging Experience -->
 
 
 <!-- # Research Interests -->
@@ -140,7 +148,6 @@ Looking for teaching or postdoc positions related to informatics and STEM educat
 - 2018
   - CIDSE Teaching Assistant Award at Arizona State University
   - ASU Virtual Reality Innovation Challenge Finalists
-
 
 
 # Professional Development
