@@ -1,5 +1,5 @@
 /**
- * Global layout file. See https://nextjs.org/learn/basics/assets-metadata-css/layout-component
+ * Custom layout file for all pages
  */
 
 import { Container, CssBaseline } from "@mui/material";
