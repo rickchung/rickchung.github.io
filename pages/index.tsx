@@ -1,10 +1,14 @@
-import Button from '@mui/material/Button'
+import Head from 'next/head';
+import Layout from '../components/layout';
 
 const MyNextWebsite = () => {
   return (
-    <div>
-      <Button variant="contained">Hello World</Button>
-    </div>
+    <Layout>
+      <Head>
+        <title>Hello World</title>
+      </Head>
+      <h1>Test</h1>
+    </Layout>
   );
 };
 
