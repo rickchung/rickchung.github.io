@@ -1,8 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
-import Link from '@mui/material/Link';
 import { Container } from "@mui/system";
 
-const desc = "\"But where, where was this self, this innermost part, this ultimate part?\"";
+const desc = "\"But where, where was this self, this innermost part, this ultimate part?\" - Siddhartha";
 
 const Copyright = () => (
   <Typography variant="body2" color="text.secondary" align="center">

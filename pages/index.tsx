@@ -8,9 +8,10 @@ const MyNextWebsite = () => {
       <Head>
         <title>Yet Another CYC</title>
       </Head>
-      <Grid container spacing={4} pt={2}>
 
-        {/* TODO: Featured Posts */}
+      {/* TODO: Featured Posts */}
+
+      <Grid container spacing={4} pt={2}>
 
         {/* New Posts */}
         <Grid item xs={12} md={8}>
