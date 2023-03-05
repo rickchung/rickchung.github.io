@@ -1,5 +1,12 @@
 /**
- * Custom layout file for all pages
+ * Custom layout file for all pages that defines the following:
+ * 
+ * - A site-wise theme provider and a custom theme
+ * - CSS baseline: Set the baseline CSS style such as no margin
+ * - Header: AppToolbar.tsx
+ * - Main: A container for page content
+ * - Footer: AppFooter.tsx
+ * 
  */
 
 import { Container, CssBaseline } from "@mui/material";
@@ -9,6 +16,7 @@ import Head from "next/head";
 
 import AppFooter from "./AppFooter/AppFooter";
 import AppToolbar from "./AppToolbar/AppToolbar";
+import appToolbarPages from "../sitedata/AppToolbar.json";
 
 const theme = createTheme({
   palette: {
@@ -31,7 +39,7 @@ const Layout = ({ children }: Props) => {
       <CssBaseline />
       <Head><meta name="description" content="Yet Another Website" /></Head>
       <header>
-        <AppToolbar />
+        <AppToolbar pages={appToolbarPages} />
       </header>
       <main>
         <Container maxWidth="lg">

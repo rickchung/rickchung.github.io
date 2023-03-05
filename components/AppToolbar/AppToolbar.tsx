@@ -2,13 +2,14 @@ import { Flood } from "@mui/icons-material";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 
-const pages = [
-  { name: "About", url: "#" },
-  { name: "Blog", url: "#" },
-  { name: "Projects", url: "#" },
-];
+type Props = {
+  pages: {
+    name: string,
+    url: string
+  }[]
+};
 
-const AppToolbar = () => {
+const AppToolbar = ({ pages }: Props) => {
   return (
     <AppBar position="static">
       <Container maxWidth="lg">

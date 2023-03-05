@@ -9,7 +9,7 @@ const MyNextWebsite = () => {
         <title>Yet Another CYC</title>
       </Head>
 
-      {/* TODO: Featured Posts */}
+      {/* TODO: Featured Timeline */}
 
       <Grid container spacing={4} pt={2}>
 
