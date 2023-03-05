@@ -1,6 +1,6 @@
 import { Divider, Grid, Typography } from '@mui/material';
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const MyNextWebsite = () => {
   return (
