@@ -15,8 +15,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Head from "next/head";
 
 import AppFooter from "./AppFooter/AppFooter";
-import appFooterData from "../sitedata/AppFooter.json";
 import AppToolbar from "./AppToolbar/AppToolbar";
+
+import appFooterData from "../sitedata/AppFooter.json";
 import appToolbarData from "../sitedata/AppToolbar.json";
 
 const theme = createTheme({
