@@ -1,14 +1,16 @@
-[
-    {
-        "name": "About",
-        "url": "#"
-    },
-    {
-        "name": "Blog",
-        "url": "#"
-    },
-    {
-        "name": "Projects",
-        "url": "#"
-    }
-]
+{
+    "pages": [
+        {
+            "name": "About",
+            "url": "#"
+        },
+        {
+            "name": "Blog",
+            "url": "#"
+        },
+        {
+            "name": "Projects",
+            "url": "#"
+        }
+    ]
+}

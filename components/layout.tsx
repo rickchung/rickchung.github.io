@@ -15,8 +15,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Head from "next/head";
 
 import AppFooter from "./AppFooter/AppFooter";
+import appFooterData from "../sitedata/AppFooter.json";
 import AppToolbar from "./AppToolbar/AppToolbar";
-import appToolbarPages from "../sitedata/AppToolbar.json";
+import appToolbarData from "../sitedata/AppToolbar.json";
 
 const theme = createTheme({
   palette: {
@@ -39,7 +40,7 @@ const Layout = ({ children }: Props) => {
       <CssBaseline />
       <Head><meta name="description" content="Yet Another Website" /></Head>
       <header>
-        <AppToolbar pages={appToolbarPages} />
+        <AppToolbar pages={appToolbarData.pages} />
       </header>
       <main>
         <Container maxWidth="lg">
@@ -47,7 +48,7 @@ const Layout = ({ children }: Props) => {
         </Container>
       </main>
       <footer>
-        <AppFooter />
+        <AppFooter desc={appFooterData.desc} />
       </footer>
     </ThemeProvider>
   );
