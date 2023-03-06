@@ -1,16 +1,36 @@
 import Markdown from "markdown-to-jsx";
+import { glob } from "glob";
+import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
 
 import Layout from "../components/Layout";
-import post1 from "../sitedata/posts/project_test1.md";
+import path, { join } from "path";
 
-const Archive = () => {
+const postRepo = join(process.cwd(), "sitedata", "posts", "*.md");
+
+async function getAllPostFnames() {
+  return await glob(postRepo);
+};
+
+
+type Props = {
+  posts: any[]
+};
+
+export default function Archive({ posts }: Props) {
   return (
     <Layout>
-      <Markdown>
-        {post1}
-      </Markdown>
+      <Box pt={2}>
+        <Typography variant="h5">All Posts</Typography>
+        {posts}
+      </Box>
     </Layout>
   )
 };
 
-export default Archive;
+export async function getStaticProps() {
+  const postFullPaths = await getAllPostFnames();
+  const postFnames = postFullPaths.map((x)=> path.basename(x));
+  console.log(postFnames);
+  return { props: { postFnames } };
+};
