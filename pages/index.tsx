@@ -2,7 +2,7 @@ import { Divider, Grid, Typography } from '@mui/material';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-const MyNextWebsite = () => {
+const Index = () => {
   return (
     <Layout>
       <Head>
@@ -45,4 +45,4 @@ const MyNextWebsite = () => {
   );
 };
 
-export default MyNextWebsite;
+export default Index;
