@@ -26,7 +26,7 @@ export function getPostById(postId: string, fields = ['title', 'content']) {
         [key: string]: string
     };
 
-    const item: Item = {};
+    const item: Item = { id: postId };
     const { data, content } = matter(readFileSync(fullPath, 'utf-8'));
     for (const f of fields) {
         if (f === 'content') {
@@ -35,6 +35,7 @@ export function getPostById(postId: string, fields = ['title', 'content']) {
             item[f] = data[f];
         }
     }
+    
     return item;
 };
 
