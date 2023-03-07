@@ -11,6 +11,10 @@
         {
             "name": "Projects",
             "url": "#"
+        },
+        {
+            "name": "Archive",
+            "url": "/archive"
         }
     ]
 }
