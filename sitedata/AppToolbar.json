@@ -2,15 +2,11 @@
     "pages": [
         {
             "name": "About",
-            "url": "#"
-        },
-        {
-            "name": "Blog",
-            "url": "#"
+            "url": "/about"
         },
         {
             "name": "Projects",
-            "url": "#"
+            "url": "/project"
         },
         {
             "name": "Archive",
