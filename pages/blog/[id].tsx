@@ -1,5 +1,8 @@
 import { getAllPostIds, getPostById } from "../../lib/api";
 
+/**
+ * Pre-rendered blog posts from "/sitedata/posts/*.md"
+ */
 export default function BlogPost({ post }: { post: { [key: string]: string } }) {
   return (
     <div>

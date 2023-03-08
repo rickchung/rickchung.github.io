@@ -2,8 +2,8 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
 
-import Layout from "../components/Layout";
-import { getAllPosts } from "../lib/api";
+import Layout from "../../components/Layout";
+import { getAllPosts } from "../../lib/api";
 
 /**
  * Display an archive list of all website posts. 
