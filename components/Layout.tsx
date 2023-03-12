@@ -17,8 +17,8 @@ import Head from "next/head";
 import AppFooter from "./AppFooter/AppFooter";
 import AppToolbar from "./AppToolbar/AppToolbar";
 
-import appFooterData from "../sitedata/AppFooter.json";
-import appToolbarData from "../sitedata/AppToolbar.json";
+import appFooterData from "../sitedata/appFooter.json";
+import appToolbarData from "../sitedata/appToolbar.json";
 
 const theme = createTheme({
   palette: {

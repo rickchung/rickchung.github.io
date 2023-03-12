@@ -1,6 +1,8 @@
 import { Box, Divider, Typography } from "@mui/material";
 import Head from "next/head";
 
+import aboutData from "../sitedata/about.json";
+import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
 import Layout from "../components/Layout";
 
 export default function About() {
@@ -15,6 +17,11 @@ export default function About() {
             About
           </Typography>
           <Divider />
+          <Box pt={2}>
+            <MyMarkdown>
+              {aboutData.about}
+            </MyMarkdown>
+          </Box>
         </Box>
       </Layout>
     </>

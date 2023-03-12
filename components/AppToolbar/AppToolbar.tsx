@@ -1,6 +1,7 @@
 import { Flood } from "@mui/icons-material";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
+import Link from "next/link";
 
 type Props = {
   pages: {
@@ -18,7 +19,7 @@ const AppToolbar = ({ pages }: Props) => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
+            component={Link}
             href="/"
             sx={{
               mr: 2,
@@ -36,6 +37,7 @@ const AppToolbar = ({ pages }: Props) => {
             {pages.map(({ name, url }) => (
               <Button
                 key={`${name}-${url}`}
+                component={Link}
                 href={url}
                 variant="outlined"
                 sx={{ color: "white" }}

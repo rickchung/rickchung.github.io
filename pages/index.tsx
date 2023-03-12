@@ -23,25 +23,27 @@ const Index = () => {
         {/* New Posts */}
         <Grid item xs={12} md={8}>
           <Typography variant='h6' gutterBottom>
-            Yet Another Blog
+            {indexData.title}
           </Typography>
           <Divider />
-          <Box>
-            <MyMarkdown>{indexData.description}</MyMarkdown>
+          <Box pt={2}>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At mollitia rem dolorum, natus in distinctio obcaecati a quas numquam quos perspiciatis. Ducimus corrupti reiciendis reprehenderit minus quas minima omnis atque!
           </Box>
         </Grid>
 
         {/* Sidebar */}
         <Grid item md={4}>
-          <Typography variant='h6'>
+          <Typography variant='h6' gutterBottom>
             About
           </Typography>
-          <Typography pt={2}>
-            {indexData.about}
-          </Typography>
-          <Typography variant='h6' pt={2}>
+          <Divider />
+          <Box pt={2}>
+            <MyMarkdown>{indexData.about}</MyMarkdown>
+          </Box>
+          <Typography variant='h6' gutterBottom pt={2}>
             Connect
           </Typography>
+          <Divider />
           <Typography pt={1}>
             {indexData.socialLinks.map((s, i) => {
               const props: {} = {
