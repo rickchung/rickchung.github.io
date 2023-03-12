@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
+import Link from "next/link";
 
 import Layout from "../../components/Layout";
 import { getAllPosts } from "../../lib/api";
@@ -18,7 +19,9 @@ export default function Archive({ posts }: { posts: any[] }) {
         <Box pt={2}>
           <Typography variant="h5">All Posts</Typography>
           <ul>
-            {posts.map((p, i) => (<li key={i}>{p.title}</li>))}
+            {posts.map((p, i) => (
+              <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
+            ))}
           </ul>
         </Box>
       </Layout>

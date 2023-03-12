@@ -1,3 +1,7 @@
+import { Box, Typography } from "@mui/material";
+import Head from "next/head";
+
+import Layout from "../../components/Layout";
 import { getAllPostIds, getPostById } from "../../lib/api";
 
 /**
@@ -5,11 +9,19 @@ import { getAllPostIds, getPostById } from "../../lib/api";
  */
 export default function BlogPost({ post }: { post: { [key: string]: string } }) {
   return (
-    <div>
-      <ul>
-        {post.title}
-      </ul>
-    </div>
+    <>
+      <Head>
+        <title>{`${post.title} - Yet Another CYC`}</title>
+      </Head>
+      <Layout>
+        <Box pt={2}>
+          <Typography variant="h5">{post.title}</Typography>
+          <Typography>
+            {post.content}
+          </Typography>
+        </Box>
+      </Layout>
+    </>
   );
 };
 
