@@ -13,7 +13,7 @@ export default function About() {
       </Head>
       <Layout>
         <Box pt={2}>
-          <Typography variant='h6' gutterBottom>
+          <Typography variant='h5' gutterBottom>
             About
           </Typography>
           <Divider />

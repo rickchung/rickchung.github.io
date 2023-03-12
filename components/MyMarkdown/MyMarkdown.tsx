@@ -11,9 +11,15 @@ export default function MyMarkdown({ children }: { children: string }) {
       h2: {
         component: Typography,
         props: {
+          variant: "h5"
+        }
+      },
+      h3: {
+        component: Typography,
+        props: {
           variant: "h6"
         }
-      }
+      },
     }
   };
   return (

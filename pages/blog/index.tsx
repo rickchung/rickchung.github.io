@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
 import Link from "next/link";
@@ -20,13 +20,16 @@ export default function Archive({ posts }: { posts: any[] }) {
       </Head>
       <Layout>
         <Box pt={3}>
-          <Typography variant="h5">Projects</Typography>
+          <Typography variant="h5" gutterBottom>Projects</Typography>
+          <Divider />
           <ul>
             {projectPosts.map((p, i) => (
               <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
             ))}
           </ul>
-          <Typography variant="h5">Blog Articles</Typography>
+          
+          <Typography variant="h5" gutterBottom>Blog Articles</Typography>
+          <Divider />
           <ul>
             {blogPosts.map((p, i) => (
               <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
