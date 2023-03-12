@@ -1,13 +1,15 @@
-import { Button, Divider, Grid, IconButton, Typography } from '@mui/material';
-import Head from 'next/head';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SchoolIcon from '@mui/icons-material/School';
+import { Button, Divider, Grid, IconButton, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import Head from 'next/head';
 
 import Layout from '../components/Layout';
-import indexData from "../sitedata/index.json";
-import { Box } from '@mui/system';
 import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
+import MyTimeline from '../components/MyTimeline/MyTimeline';
+
+import indexData from "../sitedata/index.json";
 
 const Index = () => {
   return (
@@ -15,32 +17,27 @@ const Index = () => {
       <Head>
         <title>Yet Another CYC</title>
       </Head>
-
-      {/* TODO: Featured Timeline */}
-
       <Grid container spacing={4} pt={2}>
-
-        {/* New Posts */}
         <Grid item xs={12} md={8}>
-          <Typography variant='h6' gutterBottom>
+          <Typography variant='h5' gutterBottom>
             {indexData.title}
           </Typography>
           <Divider />
           <Box pt={2}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At mollitia rem dolorum, natus in distinctio obcaecati a quas numquam quos perspiciatis. Ducimus corrupti reiciendis reprehenderit minus quas minima omnis atque!
+            <MyTimeline />
           </Box>
         </Grid>
 
         {/* Sidebar */}
         <Grid item md={4}>
-          <Typography variant='h6' gutterBottom>
+          <Typography variant='h5' gutterBottom>
             About
           </Typography>
           <Divider />
           <Box pt={2}>
             <MyMarkdown>{indexData.about}</MyMarkdown>
           </Box>
-          <Typography variant='h6' gutterBottom pt={2}>
+          <Typography variant='h5' gutterBottom pt={2}>
             Connect
           </Typography>
           <Divider />
