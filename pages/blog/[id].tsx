@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import Markdown from "markdown-to-jsx";
 import Head from "next/head";
 
 import Layout from "../../components/Layout";
@@ -15,10 +16,7 @@ export default function BlogPost({ post }: { post: { [key: string]: string } }) 
       </Head>
       <Layout>
         <Box pt={2}>
-          <Typography variant="h5">{post.title}</Typography>
-          <Typography>
-            {post.content}
-          </Typography>
+          <Markdown>{post.content}</Markdown>
         </Box>
       </Layout>
     </>
