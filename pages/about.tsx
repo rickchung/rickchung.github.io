@@ -17,7 +17,7 @@ export default function About() {
             About
           </Typography>
           <Divider />
-          <Box pt={2}>
+          <Box>
             <MyMarkdown>
               {aboutData.about}
             </MyMarkdown>

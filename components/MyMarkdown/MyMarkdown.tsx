@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import Markdown from "markdown-to-jsx";
 import Link from "next/link";
 
@@ -6,6 +7,12 @@ export default function MyMarkdown({ children }: { children: string }) {
     overrides: {
       a: {
         component: Link
+      },
+      h2: {
+        component: Typography,
+        props: {
+          variant: "h6"
+        }
       }
     }
   };
