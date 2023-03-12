@@ -1,0 +1,18 @@
+{
+    "about": "Here is just another software developer writing another blog.",
+    "description": "I am Cheng-Yu and a full-stack software developer with experience in creating and maintaining complex web applications such as:\n\n* Responsive interfaces (JavaScript/React)\n* Cloud microservices (Python, C#/.NET, AWS),\n* Relational databases, CI/CD automation (Jenkins, GitHub)\n* High code-coverage unit/integration tests\n* New prototypes for better user experiences\n\nMy development experience involves all aspects of the software lifecycle such as system analysis/design and fast Agile feedback iterations.\n\nFor more details about my work, see [Projects and Blog](/blog)",
+    "socialLinks": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/cheng-yu-chung/"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/rickchung"
+        },
+        {
+            "name": "Scholar",
+            "url": "https://scholar.google.com/citations?hl=en&user=JkNZLlcAAAAJ&view_op=list_works&authuser=1&sortby=pubdate"
+        }
+    ]
+}

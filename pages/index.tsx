@@ -1,6 +1,13 @@
-import { Divider, Grid, Typography } from '@mui/material';
+import { Button, Divider, Grid, IconButton, Typography } from '@mui/material';
 import Head from 'next/head';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import SchoolIcon from '@mui/icons-material/School';
+
 import Layout from '../components/Layout';
+import indexData from "../sitedata/index.json";
+import { Box } from '@mui/system';
+import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
 
 const Index = () => {
   return (
@@ -16,12 +23,12 @@ const Index = () => {
         {/* New Posts */}
         <Grid item xs={12} md={8}>
           <Typography variant='h6' gutterBottom>
-            Something New
+            Yet Another Blog
           </Typography>
           <Divider />
-          <Typography pt={2}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi natus repellendus, facilis atque blanditiis at enim praesentium et placeat harum, odio hic laudantium sapiente, aspernatur ea eligendi velit dicta doloribus.
-          </Typography>
+          <Box>
+            <MyMarkdown>{indexData.description}</MyMarkdown>
+          </Box>
         </Grid>
 
         {/* Sidebar */}
@@ -30,13 +37,29 @@ const Index = () => {
             About
           </Typography>
           <Typography pt={2}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae aliquam maxime. Consectetur accusantium distinctio nostrum nulla labore facere tempore eum hic provident. Quidem, animi! Tempora a sed unde expedita.
+            {indexData.about}
           </Typography>
           <Typography variant='h6' pt={2}>
-            Social
+            Connect
           </Typography>
-          <Typography pt={2}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quae aliquam maxime. Consectetur accusantium distinctio nostrum nulla labore facere tempore eum hic provident. Quidem, animi! Tempora a sed unde expedita.
+          <Typography pt={1}>
+            {indexData.socialLinks.map((s, i) => {
+              const props: {} = {
+                key: `${s.url}-${i}`,
+                href: s.url,
+                target: "_blank",
+                size: "small",
+              };
+
+              if (s.name === "LinkedIn") {
+                return <IconButton {...props}><LinkedInIcon /></IconButton>
+              } else if (s.name === "GitHub") {
+                return <IconButton {...props}><GitHubIcon /></IconButton>
+              } else if (s.name === "Scholar") {
+                return <IconButton {...props}><SchoolIcon /></IconButton>
+              }
+              return <Button variant="contained" {...props}>{s.name}</Button>
+            })}
           </Typography>
         </Grid>
 

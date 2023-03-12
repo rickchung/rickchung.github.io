@@ -16,7 +16,7 @@ export default function Archive({ posts }: { posts: any[] }) {
   return (
     <>
       <Head>
-        <title>Post Archive - Yet Another CYC</title>
+        <title>Projects and Blog - Yet Another CYC</title>
       </Head>
       <Layout>
         <Box pt={3}>
