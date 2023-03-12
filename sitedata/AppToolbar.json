@@ -1,12 +1,8 @@
 {
     "pages": [
         {
-            "name": "Blog",
+            "name": "Blog & Projects",
             "url": "/blog"
-        },
-        {
-            "name": "Projects",
-            "url": "/project"
         },
         {
             "name": "About",

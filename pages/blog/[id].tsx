@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Markdown from "markdown-to-jsx";
 import Head from "next/head";
 
@@ -36,6 +36,6 @@ export async function getStaticPaths() {
  * Get post content to pre-render  
  */
 export async function getStaticProps({ params }: { params: { [key: string]: string } }) {
-  const post = getPostById(params.id);
+  const post = getPostById(params.id, ["title", "content", "tag"]);
   return { props: { post } };
 }
