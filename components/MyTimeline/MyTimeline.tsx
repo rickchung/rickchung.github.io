@@ -5,15 +5,12 @@ import SchoolIcon from '@mui/icons-material/School';
 import StarIcon from '@mui/icons-material/Star';
 import WorkIcon from '@mui/icons-material/Work';
 import { Box, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import { time } from 'console';
 import { ReactElement } from "react";
 
 import timelineData from "../../sitedata/timeline.json";
-
-type TimelineItemType = { [key: string]: string }[];
-
 timelineData.sort((a, b) => (Date.parse(a.ts) >= Date.parse(b.ts)) ? -1 : 1);
 
+type TimelineItemType = { [key: string]: (string | undefined) }[];
 const achievements: TimelineItemType = [];
 const projects: TimelineItemType = [];
 const others: TimelineItemType = [];
@@ -52,7 +49,11 @@ export default function Timeline() {
           <>
             <ListItem key={i}>
               <ListItemIcon>
-                {avatarIcons[item.tag] ?? <FeedIcon />}
+                {typeof item.tag === "string" ? (
+                  avatarIcons[item.tag]
+                ) : (
+                  <FeedIcon />
+                )}
               </ListItemIcon>
               <ListItemText
                 primary={item.tsDetailsDesc ?? `${item.ts}`}
