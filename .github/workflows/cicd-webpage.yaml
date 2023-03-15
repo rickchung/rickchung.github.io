@@ -51,6 +51,7 @@ jobs:
           path: |
             ${{ env.PATH_BUILT }}
 
+      # Build a new website if there is no cached version
       - if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
         name: Build and export
         run: |
