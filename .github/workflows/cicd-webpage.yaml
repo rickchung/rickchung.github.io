@@ -14,7 +14,7 @@ on:
 env:
   # See package.json for the following values
   NODE_VERSION: 16
-  PATH_BUILT: ${{ github.workspace }}/out
+  PATH_BUILD: ${{ github.workspace }}/out
 
 jobs:
   config:
@@ -36,7 +36,7 @@ jobs:
 
           echo "### Configuration :floppy_disk:"  | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Event: ${build_event}"          | tee -a "$GITHUB_STEP_SUMMARY"
-          echo "- SHA: \`${ssha}\`"                   | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- SHA: \`${ssha}\`"               | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
 
           echo "cache-key-packages=${runner_os}-${{ hashFiles('**/package-lock.json') }}" | tee -a "$GITHUB_OUTPUT"
@@ -72,14 +72,19 @@ jobs:
         with:
           key: ${{ needs.config.outputs.cache-key-build }}
           path: |
-            ${{ env.PATH_BUILT }}
+            ${{ env.PATH_BUILD }}
 
       - if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
         name: Build and export
         run: |
           npm run build
+          npm run export
 
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     needs: [config, build]
     runs-on: ubuntu-latest
     steps:
@@ -92,9 +97,13 @@ jobs:
         with:
           key: ${{ needs.config.outputs.cache-key-build }}
           path: |
-            ${{ env.PATH_BUILT }}
+            ${{ env.PATH_BUILD }}
 
-      - name: Deploy the website
-        run: |
-          echo "Deploy the website"
-          ls ${{ env.PATH_BUILT }}
+      - name: Tar and upload the artifact to github
+        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf  # v1.0.7
+        with:
+          path: ${{ env.PATH_BUILD }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@e690f03220f8a0e2d4da521d8b3a50e0b52650e0  # v1.2.6
