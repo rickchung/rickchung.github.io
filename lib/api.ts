@@ -8,6 +8,19 @@ import timelineData from "../sitedata/timeline.json";
 const pathPostRepo = path.join(process.cwd(), "sitedata", "posts");
 const pathProjectRepo = path.join(process.cwd(), "sitedate", "projects");
 
+export type TimelineItemType = {
+    [key: string]: (string | undefined)
+};
+export type NewsDataType = {
+    achievements: TimelineItemType[],
+    projects: TimelineItemType[],
+};
+export type HomepageDataType = {
+    title: string,
+    about: string,
+    socialLinks: { name: string, url: string }[]
+};
+
 /**
  * Base GET helper
  * @param pathRepo path to a repository (local folder)
@@ -74,13 +87,11 @@ export async function getAllPosts(fields = ['title', 'content']) {
     return items;
 }
 
-export type TimelineItemType = { [key: string]: (string | undefined) };
-
 /**
  * Get news data to disply on the home page
  * @returns news data
  */
-export async function getNewsData() {
+export async function getNewsData(): Promise<NewsDataType> {
     timelineData.sort((a, b) => (Date.parse(a.ts) >= Date.parse(b.ts)) ? -1 : 1);
 
     const achievements: TimelineItemType[] = [];
@@ -108,6 +119,6 @@ export async function getNewsData() {
  * Get content for the homepage
  * @returns content for the homepage
  */
-export async function getHomepageData() {
+export async function getHomepageData(): Promise<HomepageDataType> {
     return homepageData;
 }

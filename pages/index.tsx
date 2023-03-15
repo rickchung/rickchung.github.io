@@ -4,12 +4,12 @@ import SchoolIcon from '@mui/icons-material/School';
 import { Button, Divider, Grid, IconButton, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Head from 'next/head';
-import ContentSection from '../components/ContentSection/ContentSection';
 
+import ContentSection from '../components/ContentSection/ContentSection';
 import Layout from '../components/Layout';
 import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
 import TimeLine from '../components/TimeLine/TimeLine';
-import { getHomepageData, getNewsData, TimelineItemType } from '../lib/api';
+import { getHomepageData, getNewsData, HomepageDataType, NewsDataType } from '../lib/api';
 
 export async function getStaticProps() {
   const news = await getNewsData();
@@ -21,15 +21,8 @@ export async function getStaticProps() {
  * Website home page
  */
 export default function Index({ news, homepage }: {
-  news: {
-    achievements: TimelineItemType[],
-    projects: TimelineItemType[],
-  },
-  homepage: {
-    title: string,
-    about: string,
-    socialLinks: { name: string, url: string }[]
-  }
+  news: NewsDataType,
+  homepage: HomepageDataType
 }) {
   return (
     <Layout>
@@ -54,7 +47,7 @@ export default function Index({ news, homepage }: {
               <MyMarkdown>{homepage.about}</MyMarkdown>
             </Box>
             <Box pt={2}>
-              Connect: 
+              Connect:
               {homepage.socialLinks.map((s, i) => {
                 const props: {} = {
                   key: `${s.url}-${i}`,
