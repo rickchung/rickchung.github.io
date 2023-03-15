@@ -55,7 +55,7 @@ jobs:
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: "npm"
 
       - name: Set up build cache
         id: cache-build
@@ -73,6 +73,7 @@ jobs:
           npm run export
 
   deploy:
+    continue-on-error: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -92,10 +93,10 @@ jobs:
             ${{ env.PATH_BUILD }}
 
       - name: Tar and upload the artifact to github
-        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf  # v1.0.7
+        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf # v1.0.7
         with:
           path: ${{ env.PATH_BUILD }}
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@e690f03220f8a0e2d4da521d8b3a50e0b52650e0  # v1.2.6
+        uses: actions/deploy-pages@e690f03220f8a0e2d4da521d8b3a50e0b52650e0 # v1.2.6
