@@ -1,0 +1,78 @@
+# Build and deploy the website to GitHub Page
+
+name: GitHub Page CICD
+
+on:
+  workflow_dispatch:
+
+env:
+  # See package.json for the following values
+  NODE_VERSION: 16
+  PATH_BUILT: ${{ github.workspace }}/out
+
+jobs:
+  config:
+    runs-on: ubuntu-latest
+    outputs:
+      cache-key: ${{ steps.config.outputs.cache-key }}
+    steps:
+      - name: Get build configuration
+        id: config
+        run: |
+          build_event=${{ github.event_name }}
+          sha=${{ github.sha }}
+          ssha=${ sha:0:7 }
+          runner_os=${{ runner.os }}
+
+          echo "### Configuration :floppy_disk:"  | tee "$GITHUB_STEP_SUMMARY"
+          echo "- Event: ${ build_event }"        | tee "$GITHUB_STEP_SUMMARY"
+          echo "- SHA: ${ ssha }"                 | tee "$GITHUB_STEP_SUMMARY"
+          echo "- Runner OS: ${runner_os}"        | tee "$GITHUB_STEP_SUMMARY"
+
+          echo "cache-key=${ssha}-${runner_os}"   | tee "$GITHUB_OUTPUT"
+
+  build:
+    needs: [config]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Set up build cache
+        id: cache-build
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        with:
+          key: ${{ needs.config.outputs.cache-key }}
+          path: |
+            ${{ env.PATH_BUILT }}
+
+      - if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
+        name: Build and export
+        run: |
+          npm install
+          npm run build
+
+  deploy:
+    needs: [config, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+
+      - name: Restore the cache
+        id: cache-build
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        with:
+          key: ${{ needs.config.outputs.cache-key }}
+          path: |
+            ${{ env.PATH_BUILT }}
+      
+      - name: Deploy the website
+        run: |
+          echo "Deploy the website"
+          ls ${{ env.PATH_BUILT }}
