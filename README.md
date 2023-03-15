@@ -2,7 +2,7 @@
 
 ![cicd-webpage](https://github.com/rickchung/rickchung.github.io/actions/workflows/cicd-webpage.yaml/badge.svg)
 
-Personal websites are everywhere. This repository is simply another one.
+Personal websites are everywhere. This is just another one.
 
 ## Development
 
@@ -48,7 +48,7 @@ npm run export
 
 The webpage is deployed to [the Github Pages](https://pages.github.com/) by GitHub Actions in a workflow [cicd-webpage.yaml](.github/workflows/cicd-webpage.yaml). The workflow runs when you push to or open a pull request against the main branch. You may also run the workflow manually as needed.
 
-Note, The production environment, `github-pages`, only allows the main branch to deploy. To deploy the website, make sure all changes are merged into the main branch.
+Note, the production environment, `github-pages`, only allows the main branch to deploy. To deploy the website, make sure all changes are merged into the main branch.
 
 ### Manage website data
 
