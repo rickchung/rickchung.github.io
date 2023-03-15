@@ -14,8 +14,12 @@ jobs:
   config:
     runs-on: ubuntu-latest
     outputs:
-      cache-key: ${{ steps.config.outputs.cache-key }}
+      cache-key-build: ${{ steps.config.outputs.cache-key-build }}
+      cache-key-packages: ${{ steps.config.outputs.cache-key-packages }}
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+
       - name: Get build configuration
         id: config
         run: |
@@ -29,7 +33,8 @@ jobs:
           echo "- SHA: ${ssha}"                   | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
 
-          echo "cache-key=${ssha}-${runner_os}"   | tee -a "$GITHUB_OUTPUT"
+          echo "cache-key-packages=${runner_os}-${{ hashFiles('**/package-lock.json') }}" | tee -a "$GITHUB_OUTPUT"
+          echo "cache-key-build=${runner_os}-${ssha}"                                     | tee -a "$GITHUB_OUTPUT"
 
   build:
     needs: [config]
@@ -43,19 +48,28 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Set up packages cache
+        id: cache-packages
+        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        with:
+          key: ${{ needs.config.outputs.cache-key-packages }}
+
+      - if: ${{ steps.cache-packages.outputs.cache-hit != 'true' }}
+        name: Install packages
+        run: |
+          npm install
+
       - name: Set up build cache
         id: cache-build
         uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
         with:
-          key: ${{ needs.config.outputs.cache-key }}
+          key: ${{ needs.config.outputs.cache-key-build }}
           path: |
             ${{ env.PATH_BUILT }}
 
-      # Build a new website if there is no cached version
       - if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
         name: Build and export
         run: |
-          npm install
           npm run build
 
   deploy:
@@ -69,10 +83,10 @@ jobs:
         id: cache-build
         uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
         with:
-          key: ${{ needs.config.outputs.cache-key }}
+          key: ${{ needs.config.outputs.cache-key-build }}
           path: |
             ${{ env.PATH_BUILT }}
-      
+
       - name: Deploy the website
         run: |
           echo "Deploy the website"
