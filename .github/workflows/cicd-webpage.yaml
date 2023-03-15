@@ -91,6 +91,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    # Required permissions to deploy to the GitHub Pages
+    # Ref: https://github.com/actions/deploy-pages
+    permissions:
+      pages: write
+      id-token: write
+    
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
