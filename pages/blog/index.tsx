@@ -1,8 +1,8 @@
-import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
 import Link from "next/link";
 
+import ContentSection from "../../components/ContentSection/ContentSection";
 import Layout from "../../components/Layout";
 import { getAllPosts } from "../../lib/api";
 
@@ -19,22 +19,21 @@ export default function Archive({ posts }: { posts: any[] }) {
         <title>Projects and Blog - Yet Another CYC</title>
       </Head>
       <Layout>
-        <Box pt={3}>
-          <Typography variant="h5" gutterBottom>Projects</Typography>
-          <Divider />
-          <ul>
-            {projectPosts.map((p, i) => (
-              <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
-            ))}
-          </ul>
-          
-          <Typography variant="h5" gutterBottom>Blog Articles</Typography>
-          <Divider />
-          <ul>
-            {blogPosts.map((p, i) => (
-              <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
-            ))}
-          </ul>
+        <Box pt={2}>
+          <ContentSection title="Projects">
+            <ul>
+              {projectPosts.map((p, i) => (
+                <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
+              ))}
+            </ul>
+          </ContentSection>
+          <ContentSection title="Blog Posts">
+            <ul>
+              {blogPosts.map((p, i) => (
+                <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
+              ))}
+            </ul>
+          </ContentSection>
         </Box>
       </Layout>
     </>
