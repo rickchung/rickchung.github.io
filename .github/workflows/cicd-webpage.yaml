@@ -21,12 +21,12 @@ jobs:
         run: |
           build_event=${{ github.event_name }}
           sha=${{ github.sha }}
-          ssha=${ sha:0:7 }
+          ssha=${sha:0:7}
           runner_os=${{ runner.os }}
 
           echo "### Configuration :floppy_disk:"  | tee "$GITHUB_STEP_SUMMARY"
-          echo "- Event: ${ build_event }"        | tee "$GITHUB_STEP_SUMMARY"
-          echo "- SHA: ${ ssha }"                 | tee "$GITHUB_STEP_SUMMARY"
+          echo "- Event: ${build_event}"          | tee "$GITHUB_STEP_SUMMARY"
+          echo "- SHA: ${ssha}"                   | tee "$GITHUB_STEP_SUMMARY"
           echo "- Runner OS: ${runner_os}"        | tee "$GITHUB_STEP_SUMMARY"
 
           echo "cache-key=${ssha}-${runner_os}"   | tee "$GITHUB_OUTPUT"
