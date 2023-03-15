@@ -13,8 +13,8 @@ type Props = {
 
 const AppFooter = ({ desc }: Props) => {
   return (
-    <>
-      <Box pt={6} pb={4}><Divider /></Box>
+    <Box pt={6} pb={4}>
+      <Box pb={4}><Divider /></Box>
       <Container>
         <Typography
           variant="subtitle1"
@@ -26,7 +26,7 @@ const AppFooter = ({ desc }: Props) => {
         </Typography>
         <Copyright />
       </Container>
-    </>
+    </Box>
   );
 };
 
