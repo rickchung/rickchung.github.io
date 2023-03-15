@@ -38,18 +38,18 @@ jobs:
           ssha=${sha:0:7}
           runner_os=${{ runner.os }}
 
-          # Only allow the main branch to deploy
+          # Only allow the page to deploy when pushing to the main branch
           disabled_deploy='true'
-          if [ "$branch_name" == "${{ env.MAIN_BRANCH_NAME }}" ]; then
+          if [ "$branch_name" == "${{ env.MAIN_BRANCH_NAME }}" ] && [ "$build_event" == "push" ]; then
             disabled_deploy='false'
           fi
 
-          echo "### Configuration :floppy_disk:"  | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "### Configurations :floppy_disk:" | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Event: ${build_event}"          | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- SHA: \`${ssha}\`"               | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Branch: ${branch_name}"         | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
-          echo "- Deploy? ${disabled_deploy}"
+          echo "- Deploy? ${disabled_deploy}"     | tee -a "$GITHUB_STEP_SUMMARY"
 
           echo "cache-key-packages=${runner_os}-${{ hashFiles('**/package-lock.json') }}" | tee -a "$GITHUB_OUTPUT"
           echo "cache-key-build=${runner_os}-${ssha}"                                     | tee -a "$GITHUB_OUTPUT"
