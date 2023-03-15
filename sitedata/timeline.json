@@ -1,0 +1,346 @@
+[
+    {
+        "ts": "2023-05",
+        "tsDetailsDesc": "2022-11 - 2023-05",
+        "tag": "Work",
+        "group": "Achievement",
+        "description": "Software Developer II",
+        "location": "GoDaddy, Tempe, AZ, USA",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2022-11",
+        "tsDetailsDesc": "2022-06 - 2022-11",
+        "tag": "Work",
+        "group": "Achievement",
+        "description": "Software Developer II",
+        "location": "GoDaddy, Kirkland, WA, USA",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2022-05",
+        "tag": "Education",
+        "group": "Achievement",
+        "description": "Ph.D. in Computer Science",
+        "location": "Arizona State University, Tempe, AZ, USA",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2021-08",
+        "tag": "Education",
+        "group": "Achievement",
+        "description": "M.S. in Computer Science",
+        "location": "Arizona State University, Tempe, AZ, USA",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2016-05",
+        "tag": "Education",
+        "group": "Achievement",
+        "description": "B.S. in Management Information Systems",
+        "location": "National Sun Yat-Sun University, Kaohsiung, Taiwan",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2021-05",
+        "tag": "Award",
+        "group": "Achievement",
+        "description": "Outstanding Computer Science Teaching Assistant Award",
+        "location": "Arizona State University, Tempe, AZ, USA",
+        "keywords": "Java",
+        "ref": ""
+    },
+    {
+        "ts": "2018-05",
+        "tag": "Award",
+        "group": "Achievement",
+        "description": "CIDSE Outstanding Computer Science Teaching Assistant Award",
+        "location": "Arizona State University, Tempe, AZ, USA",
+        "keywords": "Java",
+        "ref": ""
+    },
+    {
+        "ts": "2021",
+        "tag": "Service",
+        "group": "Other",
+        "description": "Publication/Proceedings Chair",
+        "location": "EDM '21",
+        "keywords": "Python,Shell",
+        "ref": ""
+    },
+    {
+        "ts": "2019",
+        "tag": "Service",
+        "group": "Other",
+        "description": "Proceeding Editor",
+        "location": "LAK '19",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2021",
+        "tag": "Service",
+        "group": "Other",
+        "description": "Reviewer",
+        "location": "EDM '21, LAK '21, TAICHI '21, AIED '21",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2019",
+        "tag": "Service",
+        "group": "Other",
+        "description": "Reviewer",
+        "location": "EDM '19, LAK '19",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2018",
+        "tag": "Service",
+        "group": "Other",
+        "description": "Reviewer",
+        "location": "AIED '18, CTE '18",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2017",
+        "tag": "Service",
+        "group": "Other",
+        "description": "Reviewer",
+        "location": "AIED 17\"",
+        "keywords": "",
+        "ref": ""
+    },
+    {
+        "ts": "2020-05",
+        "tag": "Featured Project",
+        "group": "Project",
+        "description": "Developed and Analyzed a Bigtable Database",
+        "location": "CSE510 Database Management Sys Implementation, ASU, Tempe, AZ",
+        "keywords": "Java,SQL,Database",
+        "ref": ""
+    },
+    {
+        "ts": "2020-05",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Conducted Spatial Data Analysis for a Taxi Service in Spark",
+        "location": "CSE511 Data Processing at Scale, ASU, Tempe, AZ",
+        "keywords": "Spark,Scala,SQL",
+        "ref": ""
+    },
+    {
+        "ts": "2019-12",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Participated in Various Software Security Projects: Reverse Engineering in Ghidra, Simulated CTFs",
+        "location": "CSE545 Software Security, ASU, Tempe, AZ",
+        "keywords": "Shell,C/C++,Security",
+        "ref": ""
+    },
+    {
+        "ts": "2019-12",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed an ASP for Warehouse Delivery Logistics",
+        "location": "CSE579 Knowledge Representation, ASU, Tempe, AZ",
+        "keywords": "Clingo,AI",
+        "ref": ""
+    },
+    {
+        "ts": "2019-05",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed a Context-Aware Mobile App for Fall Detection ",
+        "location": "CSE535 Mobile Computing, ASU, Tempe, AZ",
+        "keywords": "Android,Java,ML",
+        "ref": ""
+    },
+    {
+        "ts": "2019-05",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed Topic Translation in Augmented Reality",
+        "location": "CSE578 Data Visualization, ASU, Tempe, AZ",
+        "keywords": "Python,C#/Unity,NLP",
+        "ref": ""
+    },
+    {
+        "ts": "2018-12",
+        "tag": "Featured Project",
+        "group": "Project",
+        "description": "Developed AI Agent Based on Deep Q-Learning Network in Pacman",
+        "location": "CSE571 Artificial Intelligence, ASU, Tempe, AZ",
+        "keywords": "Python,AI,CV",
+        "ref": ""
+    },
+    {
+        "ts": "2018-05",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed and Researched a Semi-Supervised Learning Approach for Spectral Waveforms",
+        "location": "CSE575 Statistical Machine Learning, ASU, Tempe, AZ",
+        "keywords": "Python,ML,Shell",
+        "ref": ""
+    },
+    {
+        "ts": "2018-05",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Modeled the Dynamics of the Opioid Crisis on Twitter",
+        "location": "CSE576 Natural Language Processing, ASU, Tempe, AZ",
+        "keywords": "Python,ML,SVM",
+        "ref": ""
+    },
+    {
+        "ts": "2018-12",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed a Programmable, 3D-printed, Cyber-physical Robot",
+        "location": "CSE564 Software Design, ASU, Tempe, AZ",
+        "keywords": "C/C++,3D Printer",
+        "ref": ""
+    },
+    {
+        "ts": "2020-12",
+        "tag": "Research Project",
+        "group": "Project",
+        "description": "Developed a Web-based Augmented Reality Template",
+        "location": "ASU, Tempe, AZ",
+        "keywords": "JavaScript,HTML/CSS,AR",
+        "ref": ""
+    },
+    {
+        "ts": "2020-10",
+        "tag": "Side Project",
+        "group": "Project",
+        "description": "Developed a Mobile SEIR Data Visualization",
+        "location": "ASU, Tempe, AZ",
+        "keywords": "Python,DataVis,SEIR",
+        "ref": ""
+    },
+    {
+        "ts": "2016-03",
+        "tag": "Side Project",
+        "group": "Project",
+        "description": "Designed a Tutorial - Introduction to Python Programming",
+        "location": "NSYSU, TW",
+        "keywords": "Python,Tutorial",
+        "ref": ""
+    },
+    {
+        "ts": "2015-08",
+        "tag": "Featured Project",
+        "group": "Project",
+        "description": "Engineered a Personal Emotion Assistant based on Biosensors",
+        "location": "NSYSU, TW",
+        "keywords": "Android,Django,Arduino,Shell",
+        "ref": ""
+    },
+    {
+        "ts": "2016-01",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Conducted a Trend Analysis on a Discussion Forum",
+        "location": "E-Commerce, NSYSU, Kaohsiung, TW",
+        "keywords": "Python,Scrapy",
+        "ref": ""
+    },
+    {
+        "ts": "2013-05",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed a Game in Python - Space Invador",
+        "location": "Principles of Computing, NSYSU, Kaohsiung, TW",
+        "keywords": "Python,PyGame,Shell",
+        "ref": ""
+    },
+    {
+        "ts": "2014-12",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Engineered a C Shell for Operating Systems",
+        "location": "Operating Systems, NSYSU, Kaohsiung, TW",
+        "keywords": "C/C++,Linux,Shell",
+        "ref": ""
+    },
+    {
+        "ts": "2014-03",
+        "tag": "Side Project",
+        "group": "Project",
+        "description": "Developed an Online Lottery Drawer",
+        "location": "Database Management, NSYSU, Kaohsiung, TW",
+        "keywords": "HTML/CSS,JavaScript",
+        "ref": ""
+    },
+    {
+        "ts": "2014-09",
+        "tag": "Side Project",
+        "group": "Project",
+        "description": "Developed a Course Selection System",
+        "location": "NSYSU, TW",
+        "keywords": "HTML/CSS,PHP,JavaScript,SQL",
+        "ref": ""
+    },
+    {
+        "ts": "2016-03",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developoed a Multiplayer Bluetooth Android Game",
+        "location": "Business Comm & Network, NSYSU, Kaohsiung, TW",
+        "keywords": "Android,Java,Network",
+        "ref": ""
+    },
+    {
+        "ts": "2016-04",
+        "tag": "Side Project",
+        "group": "Project",
+        "description": "Joined a Hackathon and Developed a Fishing Information System on Mobile",
+        "location": "Kaohsiung, TW",
+        "keywords": "Android,Python,SQL",
+        "ref": ""
+    },
+    {
+        "ts": "2016-07",
+        "tag": "Course Project",
+        "group": "Project",
+        "description": "Developed Android Wallpaper Generator",
+        "location": "NSYSU, TW",
+        "keywords": "Android,Java,ML",
+        "ref": ""
+    },
+    {
+        "ts": "2019-12",
+        "tag": "Featured Project",
+        "group": "Project",
+        "description": "Developed a Prototype for Collaborative Problem Solving in Augmented Reality",
+        "location": "ASU, Tempe, AZ",
+        "keywords": "C#/Unity,AR,Network",
+        "ref": ""
+    },
+    {
+        "ts": "2018-04",
+        "tag": "Research Project",
+        "group": "Project",
+        "description": "Developed a Prototype for Embodiment and Debugging Practice in Augmented Reality",
+        "location": "ASU, Tempe, AZ",
+        "keywords": "C#/Unity,AR,UX",
+        "ref": ""
+    },
+    {
+        "ts": "2017-12",
+        "tag": "Research Project",
+        "group": "Project",
+        "description": "Developed a Prototype for Learning Abstraction in Computing via Augmented Reality",
+        "location": "ASU, Tempe, AZ",
+        "keywords": "C#/Unity,AR,UX",
+        "ref": ""
+    }
+]

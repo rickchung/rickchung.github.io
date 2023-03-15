@@ -1,0 +1,12 @@
+{
+    "pages": [
+        {
+            "name": "Projects & Blog",
+            "url": "/blog"
+        },
+        {
+            "name": "About",
+            "url": "/about"
+        }
+    ]
+}
