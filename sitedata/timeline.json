@@ -4,7 +4,7 @@
         "tsDetailsDesc": "2022-11 - 2023-05",
         "tag": "Work",
         "group": "Achievement",
-        "description": "Served as Software Developer II",
+        "description": "Software Developer II",
         "location": "GoDaddy, Tempe, AZ, USA",
         "keywords": "",
         "ref": ""
@@ -14,7 +14,7 @@
         "tsDetailsDesc": "2022-06 - 2022-11",
         "tag": "Work",
         "group": "Achievement",
-        "description": "Served as Software Developer II",
+        "description": "Software Developer II",
         "location": "GoDaddy, Kirkland, WA, USA",
         "keywords": "",
         "ref": ""
@@ -23,7 +23,7 @@
         "ts": "2022-05",
         "tag": "Education",
         "group": "Achievement",
-        "description": "Awarded Ph.D. in Computer Science",
+        "description": "Ph.D. in Computer Science",
         "location": "Arizona State University, Tempe, AZ, USA",
         "keywords": "",
         "ref": ""
@@ -32,7 +32,7 @@
         "ts": "2021-08",
         "tag": "Education",
         "group": "Achievement",
-        "description": "Awarded M.S. in Computer Science",
+        "description": "M.S. in Computer Science",
         "location": "Arizona State University, Tempe, AZ, USA",
         "keywords": "",
         "ref": ""
@@ -41,7 +41,7 @@
         "ts": "2016-05",
         "tag": "Education",
         "group": "Achievement",
-        "description": "Awarded B.S. in Management Information Systems",
+        "description": "B.S. in Management Information Systems",
         "location": "National Sun Yat-Sun University, Kaohsiung, Taiwan",
         "keywords": "",
         "ref": ""
@@ -51,7 +51,7 @@
         "tag": "Award",
         "group": "Achievement",
         "description": "Outstanding Computer Science Teaching Assistant Award",
-        "location": "Arizona State University, Tempe, AZ",
+        "location": "Arizona State University, Tempe, AZ, USA",
         "keywords": "Java",
         "ref": ""
     },
@@ -59,8 +59,8 @@
         "ts": "2018-05",
         "tag": "Award",
         "group": "Achievement",
-        "description": "Awarded CIDSE Outstanding Computer Science Teaching Assistant Award",
-        "location": "Arizona State University, Tempe, AZ",
+        "description": "CIDSE Outstanding Computer Science Teaching Assistant Award",
+        "location": "Arizona State University, Tempe, AZ, USA",
         "keywords": "Java",
         "ref": ""
     },
