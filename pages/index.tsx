@@ -8,12 +8,12 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
 import MyTimeline from '../components/MyTimeline/MyTimeline';
-import { getTimelineData, TimelineItemType } from '../lib/api';
+import { getNewsData, TimelineItemType } from '../lib/api';
 
 import indexData from "../sitedata/index.json";
 
 export async function getStaticProps() {
-  const news = await getTimelineData();
+  const news = await getNewsData();
   return { props: { news } };
 };
 

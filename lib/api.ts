@@ -79,7 +79,7 @@ export type TimelineItemType = { [key: string]: (string | undefined) };
  * Get news data to disply on the home page
  * @returns news data
  */
-export async function getTimelineData() {
+export async function getNewsData() {
     timelineData.sort((a, b) => (Date.parse(a.ts) >= Date.parse(b.ts)) ? -1 : 1);
 
     const achievements: TimelineItemType[] = [];
