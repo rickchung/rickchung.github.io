@@ -3,7 +3,7 @@ import { glob } from "glob";
 import matter from "gray-matter";
 import path from "path";
 
-import homepageData from "../sitedata/index.json";
+import homepageData from "../sitedata/homepage.json";
 import timelineData from "../sitedata/timeline.json";
 const pathPostRepo = path.join(process.cwd(), "sitedata", "posts");
 const pathProjectRepo = path.join(process.cwd(), "sitedate", "projects");
