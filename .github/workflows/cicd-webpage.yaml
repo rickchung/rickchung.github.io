@@ -24,12 +24,12 @@ jobs:
           ssha=${sha:0:7}
           runner_os=${{ runner.os }}
 
-          echo "### Configuration :floppy_disk:"  | tee "$GITHUB_STEP_SUMMARY"
-          echo "- Event: ${build_event}"          | tee "$GITHUB_STEP_SUMMARY"
-          echo "- SHA: ${ssha}"                   | tee "$GITHUB_STEP_SUMMARY"
-          echo "- Runner OS: ${runner_os}"        | tee "$GITHUB_STEP_SUMMARY"
+          echo "### Configuration :floppy_disk:"  | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Event: ${build_event}"          | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- SHA: ${ssha}"                   | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
 
-          echo "cache-key=${ssha}-${runner_os}"   | tee "$GITHUB_OUTPUT"
+          echo "cache-key=${ssha}-${runner_os}"   | tee -a "$GITHUB_OUTPUT"
 
   build:
     needs: [config]
