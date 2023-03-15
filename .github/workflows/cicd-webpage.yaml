@@ -12,6 +12,8 @@ on:
   workflow_dispatch:
 
 env:
+  MAIN_BRANCH_NAME: "master"
+
   # See package.json for the following values
   NODE_VERSION: 16
   PATH_BUILD: ${{ github.workspace }}/out
@@ -22,6 +24,7 @@ jobs:
     outputs:
       cache-key-build: ${{ steps.config.outputs.cache-key-build }}
       cache-key-packages: ${{ steps.config.outputs.cache-key-packages }}
+      disabled-deploy: ${{ steps.config.outputs.disabled-deploy }}
     steps:
       - name: Checkout the repository
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
@@ -35,14 +38,22 @@ jobs:
           ssha=${sha:0:7}
           runner_os=${{ runner.os }}
 
+          # Only allow the main branch to deploy
+          disabled_deploy='true'
+          if [ "$branch_name" == "${{ env.MAIN_BRANCH_NAME }}" ]; then
+            disabled_deploy='false'
+          fi
+
           echo "### Configuration :floppy_disk:"  | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Event: ${build_event}"          | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- SHA: \`${ssha}\`"               | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Branch: ${branch_name}"         | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Deploy? ${disabled_deploy}"
 
           echo "cache-key-packages=${runner_os}-${{ hashFiles('**/package-lock.json') }}" | tee -a "$GITHUB_OUTPUT"
           echo "cache-key-build=${runner_os}-${ssha}"                                     | tee -a "$GITHUB_OUTPUT"
+          echo "disabled-deploy=${disabled_deploy}"                                       | tee -a "$GITHUB_OUTPUT"
 
   build:
     needs: [config]
@@ -73,12 +84,13 @@ jobs:
           npm run export
 
   deploy:
-    continue-on-error: true
+    needs: [config, build]
+    if: ${{ needs.config.outputs.disabled-deploy != 'true' }}
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    needs: [config, build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
