@@ -3,33 +3,57 @@
 name: GitHub Page CICD
 
 on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+      - "master"
   workflow_dispatch:
 
 env:
+  MAIN_BRANCH_NAME: "master"
+
   # See package.json for the following values
   NODE_VERSION: 16
-  PATH_BUILT: ${{ github.workspace }}/out
+  PATH_BUILD: ${{ github.workspace }}/out
 
 jobs:
   config:
     runs-on: ubuntu-latest
     outputs:
-      cache-key: ${{ steps.config.outputs.cache-key }}
+      cache-key-build: ${{ steps.config.outputs.cache-key-build }}
+      cache-key-packages: ${{ steps.config.outputs.cache-key-packages }}
+      disabled-deploy: ${{ steps.config.outputs.disabled-deploy }}
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+
       - name: Get build configuration
         id: config
         run: |
           build_event=${{ github.event_name }}
+          branch_name=${{ github.ref_name }}
           sha=${{ github.sha }}
-          ssha=${ sha:0:7 }
+          ssha=${sha:0:7}
           runner_os=${{ runner.os }}
 
-          echo "### Configuration :floppy_disk:"  | tee "$GITHUB_STEP_SUMMARY"
-          echo "- Event: ${ build_event }"        | tee "$GITHUB_STEP_SUMMARY"
-          echo "- SHA: ${ ssha }"                 | tee "$GITHUB_STEP_SUMMARY"
-          echo "- Runner OS: ${runner_os}"        | tee "$GITHUB_STEP_SUMMARY"
+          # Only allow the page to deploy when pushing to the main branch
+          disabled_deploy='true'
+          if [ "$branch_name" == "${{ env.MAIN_BRANCH_NAME }}" ] && [ "$build_event" == "push" ]; then
+            disabled_deploy='false'
+          fi
 
-          echo "cache-key=${ssha}-${runner_os}"   | tee "$GITHUB_OUTPUT"
+          echo "### Configurations :floppy_disk:" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Event: ${build_event}"          | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- SHA: \`${ssha}\`"               | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Branch: ${branch_name}"         | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Disabled deploy? ${disabled_deploy}"     | tee -a "$GITHUB_STEP_SUMMARY"
+
+          echo "cache-key-packages=${runner_os}-${{ hashFiles('**/package-lock.json') }}" | tee -a "$GITHUB_OUTPUT"
+          echo "cache-key-build=${runner_os}-${ssha}"                                     | tee -a "$GITHUB_OUTPUT"
+          echo "disabled-deploy=${disabled_deploy}"                                       | tee -a "$GITHUB_OUTPUT"
 
   build:
     needs: [config]
@@ -42,23 +66,31 @@ jobs:
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
 
       - name: Set up build cache
         id: cache-build
         uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
         with:
-          key: ${{ needs.config.outputs.cache-key }}
+          key: ${{ needs.config.outputs.cache-key-build }}
           path: |
-            ${{ env.PATH_BUILT }}
+            ${{ env.PATH_BUILD }}
 
       - if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
         name: Build and export
         run: |
           npm install
           npm run build
+          npm run export
 
   deploy:
     needs: [config, build]
+    if: ${{ needs.config.outputs.disabled-deploy != 'true' }}
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -68,11 +100,15 @@ jobs:
         id: cache-build
         uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
         with:
-          key: ${{ needs.config.outputs.cache-key }}
+          key: ${{ needs.config.outputs.cache-key-build }}
           path: |
-            ${{ env.PATH_BUILT }}
-      
-      - name: Deploy the website
-        run: |
-          echo "Deploy the website"
-          ls ${{ env.PATH_BUILT }}
+            ${{ env.PATH_BUILD }}
+
+      - name: Tar and upload the artifact to github
+        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf # v1.0.7
+        with:
+          path: ${{ env.PATH_BUILD }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@e690f03220f8a0e2d4da521d8b3a50e0b52650e0 # v1.2.6
