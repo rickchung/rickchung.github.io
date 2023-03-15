@@ -1,6 +1,6 @@
 # Yet Another Personal Website
 
-![cicd-webpage](https://github.com/rickchung/rickchung.github.io/actions/workflows/cicd-webpage.yml/badge.svg)
+![cicd-webpage](https://github.com/rickchung/rickchung.github.io/actions/workflows/cicd-webpage.yaml/badge.svg)
 
 The repository hosts my personal website in React and Next.js.
 
