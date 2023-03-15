@@ -8,10 +8,24 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
 import MyTimeline from '../components/MyTimeline/MyTimeline';
+import { getTimelineData, TimelineItemType } from '../lib/api';
 
 import indexData from "../sitedata/index.json";
 
-const Index = () => {
+export async function getStaticProps() {
+  const news = await getTimelineData();
+  return { props: { news } };
+};
+
+/**
+ * Website home page
+ */
+export default function Index({ news }: {
+  news: {
+    achievements: TimelineItemType[],
+    projects: TimelineItemType[],
+  }
+}) {
   return (
     <Layout>
       <Head>
@@ -24,7 +38,7 @@ const Index = () => {
           </Typography>
           <Divider />
           <Box pt={2}>
-            <MyTimeline />
+            <MyTimeline news={news} />
           </Box>
         </Grid>
 
@@ -66,5 +80,3 @@ const Index = () => {
     </Layout>
   );
 };
-
-export default Index;

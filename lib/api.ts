@@ -3,6 +3,7 @@ import { glob } from "glob";
 import matter from "gray-matter";
 import path from "path";
 
+import timelineData from "../sitedata/timeline.json";
 const pathPostRepo = path.join(process.cwd(), "sitedata", "posts");
 const pathProjectRepo = path.join(process.cwd(), "sitedate", "projects");
 
@@ -71,3 +72,33 @@ export async function getAllPosts(fields = ['title', 'content']) {
     const items = ids.map((i) => getPostById(i, fields));
     return items;
 }
+
+export type TimelineItemType = { [key: string]: (string | undefined) };
+
+/**
+ * Get news data to disply on the home page
+ * @returns news data
+ */
+export async function getTimelineData() {
+    timelineData.sort((a, b) => (Date.parse(a.ts) >= Date.parse(b.ts)) ? -1 : 1);
+
+    const achievements: TimelineItemType[] = [];
+    const projects: TimelineItemType[] = [];
+    const others: TimelineItemType[] = [];
+
+    for (const i of timelineData) {
+        switch (i.group) {
+            case "Achievement":
+                achievements.push(i);
+                break;
+            case "Project":
+                projects.push(i);
+                break;
+            case "Other":
+                others.push(i);
+                break;
+        }
+    }
+
+    return { achievements, projects };
+};
