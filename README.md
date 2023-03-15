@@ -6,12 +6,8 @@ The repository hosts my personal website in React and Next.js.
 
 ### Requirements
 
-* Node 16
-* React 18
-* Next.js 13
-* Mateiral UI 5
-* Markdown-to-js
-* Chart.js
+* Stack: Node 16, React 18, Next.js 13
+* View: Mateiral UI 5, Markdown-to-js
 
 ## Operations
 
