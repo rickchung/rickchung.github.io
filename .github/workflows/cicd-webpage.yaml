@@ -49,7 +49,7 @@ jobs:
           echo "- SHA: \`${ssha}\`"               | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Branch: ${branch_name}"         | tee -a "$GITHUB_STEP_SUMMARY"
           echo "- Runner OS: ${runner_os}"        | tee -a "$GITHUB_STEP_SUMMARY"
-          echo "- Deploy? ${disabled_deploy}"     | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "- Disabled deploy? ${disabled_deploy}"     | tee -a "$GITHUB_STEP_SUMMARY"
 
           echo "cache-key-packages=${runner_os}-${{ hashFiles('**/package-lock.json') }}" | tee -a "$GITHUB_OUTPUT"
           echo "cache-key-build=${runner_os}-${ssha}"                                     | tee -a "$GITHUB_OUTPUT"
