@@ -55,18 +55,7 @@ jobs:
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
         with:
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Set up packages cache
-        id: cache-packages
-        uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
-        with:
-          key: ${{ needs.config.outputs.cache-key-packages }}
-          path: ~/.npm
-
-      - if: ${{ steps.cache-packages.outputs.cache-hit != 'true' }}
-        name: Install packages
-        run: |
-          npm install
+          cache: 'npm'
 
       - name: Set up build cache
         id: cache-build
@@ -79,6 +68,7 @@ jobs:
       - if: ${{ steps.cache-build.outputs.cache-hit != 'true' }}
         name: Build and export
         run: |
+          npm install
           npm run build
           npm run export
 
