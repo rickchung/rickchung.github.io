@@ -59,6 +59,7 @@ jobs:
         uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
         with:
           key: ${{ needs.config.outputs.cache-key-packages }}
+          path: ~/.npm
 
       - if: ${{ steps.cache-packages.outputs.cache-hit != 'true' }}
         name: Install packages
