@@ -9,13 +9,14 @@ import { ReactElement } from "react";
 
 import { TimelineItemType } from '../../lib/api';
 
-export default function MyTimeline({ news }: {
-  news: {
-    achievements: TimelineItemType[],
-    projects: TimelineItemType[],
-  }
+/**
+ * Timeline section (list)
+ */
+export default function TimeLine({ title = "", items, disableIcons = false }: {
+  title?: string,
+  items: TimelineItemType[],
+  disableIcons?: boolean
 }) {
-
   const icons: { [key: string]: ReactElement } = {
     "Award": <StarIcon />,
     "Work": <WorkIcon />,
@@ -26,21 +27,21 @@ export default function MyTimeline({ news }: {
     "Course Project": <SchoolIcon />,
   };
 
-  const makeNewSection = (title: string, items: TimelineItemType[]) => (
-    <>
-      <Typography variant="h6">
-        {title}
-      </Typography>
+  return (
+    <Box>
+      <Typography variant="h6">{title}</Typography>
       <List>
         {items.map((item, i) => (
-          <ListItem key={i}>
-            <ListItemIcon>
-              {typeof item.tag === "string" ? (
-                icons[item.tag]
-              ) : (
-                <FeedIcon />
-              )}
-            </ListItemIcon>
+          <ListItem key={i} disableGutters={disableIcons}>
+            {!disableIcons &&
+              <ListItemIcon>
+                {typeof item.tag === "string" ? (
+                  icons[item.tag]
+                ) : (
+                  <FeedIcon />
+                )}
+              </ListItemIcon>
+            }
             <ListItemText
               primary={item.tsDetailsDesc ?? `${item.ts}`}
               secondary={
@@ -58,13 +59,6 @@ export default function MyTimeline({ news }: {
           </ListItem>
         ))}
       </List>
-    </>
-  );
-
-  return (
-    <Box>
-      {makeNewSection("Milestones", news.achievements)}
-      {makeNewSection("Projects", news.projects)}
     </Box>
   );
 };

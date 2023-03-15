@@ -3,6 +3,7 @@ import { glob } from "glob";
 import matter from "gray-matter";
 import path from "path";
 
+import homepageData from "../sitedata/index.json";
 import timelineData from "../sitedata/timeline.json";
 const pathPostRepo = path.join(process.cwd(), "sitedata", "posts");
 const pathProjectRepo = path.join(process.cwd(), "sitedate", "projects");
@@ -102,3 +103,11 @@ export async function getNewsData() {
 
     return { achievements, projects };
 };
+
+/**
+ * Get content for the homepage
+ * @returns content for the homepage
+ */
+export async function getHomepageData() {
+    return homepageData;
+}
