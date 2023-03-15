@@ -19,7 +19,8 @@
     "raw-loader": "^4.0.2",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "webpack": "^5.76.2"
   },
   "devDependencies": {
     "@types/node": "18.14.4",
