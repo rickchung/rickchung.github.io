@@ -4,7 +4,7 @@ tag: project
 createdDate: "Wed Mar 15 22:40:23 MST 2023"
 modifiedDate: "Thu Mar 16 09:26:42 MST 2023"
 keywords: augmented reality, learning experience, collaborative learning
-previewImagePath: /img/a1.png
+previewImagePath: /img/a1.jpg
 description: "How I got lost in Augmented Reality Learning Experience"
 ---
 
