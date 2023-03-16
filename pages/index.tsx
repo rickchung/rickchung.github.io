@@ -1,7 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SchoolIcon from '@mui/icons-material/School';
-import { Button, Grid, IconButton } from '@mui/material';
+import { Button, Grid, IconButton, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Head from 'next/head';
 
@@ -24,9 +24,6 @@ export default function Index({ news, homepage }: {
   news: NewsDataType,
   homepage: HomepageDataType
 }) {
-
-  const featuredPost = homepage.featuredPosts[0];
-
   return (
     <Layout>
       <Head>
@@ -36,18 +33,17 @@ export default function Index({ news, homepage }: {
         <Grid item xs={12} md={8}>
           <ContentSection title="What's New">
             <Box pt={2}>
-              {
-                (featuredPost) ? (
+              {homepage.featuredPosts.map((featuredPost, i) => (
+                <Box id={`${featuredPost.id}-i`} pb={4}>
+                  <Typography variant='caption'>{featuredPost.createdDate}</Typography>
                   <MyMarkdownPreview continueLink={`/blog/${featuredPost.id}`}>
                     {featuredPost.content}
                   </MyMarkdownPreview>
-                ) : (
-                  "N/A"
-                )
-              }
+                </Box>
+              ))}
             </Box>
           </ContentSection>
-          <ContentSection title="Trivial History" pt={6}>
+          <ContentSection title="Trivial History" pt={2}>
             <Box pt={2}>
               <TimeLine title='Projects' items={news.projects} disableIcons />
             </Box>

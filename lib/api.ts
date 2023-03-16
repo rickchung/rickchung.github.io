@@ -124,6 +124,8 @@ export async function getNewsData(): Promise<NewsDataType> {
  * @returns content for the homepage
  */
 export async function getHomepageData(): Promise<HomepageDataType> {
-    const featuredPosts = homepageData.featuredPosts.map((id) => getPostById(id));
+    const featuredPosts = homepageData.featuredPosts.map(
+        (id) => getPostById(id, ['title', 'content', 'createdDate'])
+    );
     return { ...homepageData, featuredPosts };
 }

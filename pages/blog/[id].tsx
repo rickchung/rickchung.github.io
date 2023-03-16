@@ -1,5 +1,6 @@
-import { Box } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Head from "next/head";
+import Link from "next/link";
 
 import Layout from "../../components/Layout";
 import MyMarkdown from "../../components/MyMarkdown/MyMarkdown";
@@ -16,7 +17,15 @@ export default function BlogPost({ post }: { post: { [key: string]: string } }) 
       </Head>
       <Layout>
         <Box pt={4}>
+          {post.createdDate && <Typography variant='caption'>{post.createdDate}</Typography>}
           <MyMarkdown>{post.content}</MyMarkdown>
+          <Button
+            variant="contained"
+            component={Link}
+            href={"/blog"}
+          >
+            Back to the Blog
+          </Button>
         </Box>
       </Layout>
     </>
@@ -36,6 +45,6 @@ export async function getStaticPaths() {
  * Get post content to pre-render  
  */
 export async function getStaticProps({ params }: { params: { [key: string]: string } }) {
-  const post = getPostById(params.id, ["title", "content", "tag"]);
+  const post = getPostById(params.id, ["title", "content", "tag", "createdDate"]);
   return { props: { post } };
 }
