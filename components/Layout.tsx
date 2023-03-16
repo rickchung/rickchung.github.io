@@ -39,7 +39,6 @@ const Layout = ({ children }: Props) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Head><meta name="description" content="Yet Another Website" /></Head>
       <header>
         <AppToolbar pages={appToolbarData.pages} />
       </header>

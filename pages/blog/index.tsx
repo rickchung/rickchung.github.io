@@ -1,10 +1,10 @@
 import { Box } from "@mui/system";
-import Head from "next/head";
 import Link from "next/link";
 
 import ContentSection from "../../components/ContentSection/ContentSection";
 import Layout from "../../components/Layout";
 import { getAllPosts, PostItemType } from "../../lib/api";
+import MetaHead from "../../lib/seo";
 
 function IndexSection(title: string, posts: PostItemType[]) {
   return (posts.length == 0) ? (
@@ -15,7 +15,7 @@ function IndexSection(title: string, posts: PostItemType[]) {
     <ContentSection title={title}>
       <ul>
         {posts.map((p, i) => (
-          <Link href={`/blog/${p.id}`}>
+          <Link key={`${p.id}-${i}`} href={`/blog/${p.id}`}>
             {p.title}{p.createdDate && ` - ${p.createdDate}`}
           </Link>
         ))}
@@ -34,9 +34,10 @@ export default function Archive({ posts }: { posts: any[] }) {
 
   return (
     <>
-      <Head>
-        <title>Projects and Blog - Yet Another CYC</title>
-      </Head>
+      <MetaHead
+        title="Find My Blog Posts and Projects - Yet Another CYC"
+        description="CYC blog posts and projects"
+      />
       <Layout>
         <Box pt={2}>
           {IndexSection("Blog Posts", blogPosts)}

@@ -1,3 +1,7 @@
+/**
+ * Mock API functions that return site data
+ */
+
 import { readFileSync } from "fs";
 import { glob } from "glob";
 import matter from "gray-matter";
@@ -16,12 +20,14 @@ export type NewsDataType = {
 };
 export type HomepageDataType = {
     featuredPosts: PostItemType[],
+    title: string
     about: string,
     socialLinks: { name: string, url: string }[]
 };
 
 export type PostItemType = {
     id: string,
+    title: string,
     [key: string]: string
 };
 
@@ -45,7 +51,7 @@ async function getDataIds(pathRepo: string, globPtn = '*.md') {
 function getMdDataById(pathRepo: string, dataId: string, fields: string[]) {
     const fullPath = path.join(pathRepo, `${dataId}.md`);
 
-    const item: PostItemType = { id: dataId };
+    const item: PostItemType = { id: dataId, title: "" };
     const { data, content } = matter(readFileSync(fullPath, 'utf-8'));
     for (const f of fields) {
         if (f === 'content') {
