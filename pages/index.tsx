@@ -45,7 +45,6 @@ export default function Index({ news, homepage }: {
                   "N/A"
                 )
               }
-
             </Box>
           </ContentSection>
           <ContentSection title="Trivial History" pt={6}>
