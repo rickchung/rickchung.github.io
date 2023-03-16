@@ -25,6 +25,9 @@ export default function Index({ news, homepage }: {
   news: NewsDataType,
   homepage: HomepageDataType
 }) {
+
+  const featuredPost = homepage.featuredPosts[0];
+
   return (
     <Layout>
       <Head>
@@ -32,11 +35,23 @@ export default function Index({ news, homepage }: {
       </Head>
       <Grid container spacing={4} pt={2}>
         <Grid item xs={12} md={8}>
-          <ContentSection title="Blog">
+          <ContentSection title="What's New">
             <Box pt={2}>
-              <MyMarkdown>
-                {homepage.featuredPosts[0]?.content ?? "N/A"}
-              </MyMarkdown>
+              {
+                (featuredPost) ? (
+                  <>
+                    <MyMarkdown>
+                      {featuredPost.content ?? "N/A"}
+                    </MyMarkdown>
+                    <Link href={`/blog/${featuredPost.id}`}>
+                      Link to the Post
+                    </Link>
+                  </>
+                ) : (
+                  "N/A"
+                )
+              }
+
             </Box>
           </ContentSection>
           <ContentSection title="History">
