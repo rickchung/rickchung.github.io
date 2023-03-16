@@ -34,7 +34,7 @@ export default function Index({ news, homepage }: {
           <ContentSection title="What's New">
             <Box pt={2}>
               {homepage.featuredPosts.map((featuredPost, i) => (
-                <Box id={`${featuredPost.id}-i`} pb={4}>
+                <Box key={`${featuredPost.id}-i`} pb={4}>
                   <Typography variant='caption'>{featuredPost.createdDate}</Typography>
                   <MyMarkdownPreview continueLink={`/blog/${featuredPost.id}`}>
                     {featuredPost.content}

@@ -1,8 +1,8 @@
 ---
-title: "[Series] Build Another Website in React/Next.js"
+title: "[Blog Series] Build Another Website in React/Next.js"
 tag: blog
 createdDate: "Wed Mar 15 16:05:55 MST 2023"
-modifiedDate: "Wed Mar 15 23:46:30 MST 2023"
+modifiedDate: "Thu Mar 16 00:04:53 MST 2023"
 keywords: react, next.js, CICD, web apps, GitHub
 ---
 

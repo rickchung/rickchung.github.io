@@ -1,12 +1,12 @@
 ---
-title: "[Series] Lost in Augmented Reality Learning Experiences"
+title: "[Project Series] Lost in Augmented Reality Learning Experiences"
 tag: project
 createdDate: "Wed Mar 15 22:40:23 MST 2023"
-modifiedDate: "Wed Mar 15 23:56:33 MST 2023"
+modifiedDate: "Thu Mar 16 00:04:53 MST 2023"
 keywords: augmented reality, learning experience, collaborative learning
 ---
 
-## [Series] Lost in Augmented Reality Learning Experiences
+## [Project Series] Lost in Augmented Reality Learning Experiences
 
 Augmented reality (AR) may be a fun tool for a lot of people. However, during my Ph.D. years in 2019-2021, it was never fun at all. It is definitely the most challenging (and depressing in some ways) project in my life. Well, to be fair, maybe all Ph.D. research projects are tedious, daunting, and intimidating. But I think there are projects which you can reasonably believe "Yes. I can do it". In my opinion, an AR project may not fall into that category unfortunately (except you have plenty of resources, workforce, and time).
 
