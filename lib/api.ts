@@ -6,7 +6,6 @@ import path from "path";
 import homepageData from "../sitedata/homepage.json";
 import timelineData from "../sitedata/timeline.json";
 const pathPostRepo = path.join(process.cwd(), "sitedata", "posts");
-const pathProjectRepo = path.join(process.cwd(), "sitedate", "projects");
 
 export type TimelineItemType = {
     [key: string]: (string | undefined)
@@ -16,9 +15,14 @@ export type NewsDataType = {
     projects: TimelineItemType[],
 };
 export type HomepageDataType = {
-    title: string,
+    featuredPosts: PostItemType[],
     about: string,
     socialLinks: { name: string, url: string }[]
+};
+
+export type PostItemType = {
+    id: string,
+    [key: string]: string
 };
 
 /**
@@ -41,17 +45,17 @@ async function getDataIds(pathRepo: string, globPtn = '*.md') {
 function getMdDataById(pathRepo: string, dataId: string, fields: string[]) {
     const fullPath = path.join(pathRepo, `${dataId}.md`);
 
-    type Item = {
-        [key: string]: string
-    };
-
-    const item: Item = { id: dataId };
+    const item: PostItemType = { id: dataId };
     const { data, content } = matter(readFileSync(fullPath, 'utf-8'));
     for (const f of fields) {
         if (f === 'content') {
             item[f] = content;
         } else if (data.hasOwnProperty(f)) {
-            item[f] = data[f];
+            if (f === "createdDate" || f === "modifiedDate") {
+                item[f] = new Date(Date.parse(data[f])).toLocaleDateString();
+            } else {
+                item[f] = data[f];
+            }
         }
     }
 
@@ -120,5 +124,6 @@ export async function getNewsData(): Promise<NewsDataType> {
  * @returns content for the homepage
  */
 export async function getHomepageData(): Promise<HomepageDataType> {
-    return homepageData;
+    const featuredPosts = homepageData.featuredPosts.map((id) => getPostById(id));
+    return { ...homepageData, featuredPosts };
 }

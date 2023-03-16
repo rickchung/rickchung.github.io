@@ -72,7 +72,7 @@ Along with other static content on the website, blog posts and project descripti
 
 1. Create a new markdown file in [sitedata/posts](/sitedata/posts/)
 1. Ensure the filename is in the format `<tag>_<short_post_title>.md`
-1. Add a front matter block (see [Front Matter](https://jekyllrb.com/docs/front-matter/)) that includes a `title` and a `tag` (which must be "blog" or "project)
+1. Add a front matter block (see [Front Matter](https://jekyllrb.com/docs/front-matter/)) that includes a `title`, a `tag` ("blog" or "project), `createdDate` and `modifiedDate`.
 1. Add any markdown content to the file as you wish
 1. Build and test the website locally and see if the webpage renders correctly
 
