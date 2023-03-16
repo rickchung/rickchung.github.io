@@ -1,14 +1,13 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SchoolIcon from '@mui/icons-material/School';
-import { Button, Divider, Grid, IconButton, Typography } from '@mui/material';
+import { Button, Grid, IconButton } from '@mui/material';
 import { Box } from '@mui/system';
 import Head from 'next/head';
-import Link from 'next/link';
 
 import ContentSection from '../components/ContentSection/ContentSection';
 import Layout from '../components/Layout';
-import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
+import MyMarkdown, { MyMarkdownPreview } from '../components/MyMarkdown/MyMarkdown';
 import TimeLine from '../components/TimeLine/TimeLine';
 import { getHomepageData, getNewsData, HomepageDataType, NewsDataType } from '../lib/api';
 
@@ -39,22 +38,16 @@ export default function Index({ news, homepage }: {
             <Box pt={2}>
               {
                 (featuredPost) ? (
-                  <>
-                    <MyMarkdown>
-                      {featuredPost.content ?? "N/A"}
-                    </MyMarkdown>
-                    <Link href={`/blog/${featuredPost.id}`}>
-                      Link to the Post
-                    </Link>
-                  </>
+                  <MyMarkdownPreview continueLink={`/blog/${featuredPost.id}`}>
+                    {featuredPost.content}
+                  </MyMarkdownPreview>
                 ) : (
                   "N/A"
                 )
               }
-
             </Box>
           </ContentSection>
-          <ContentSection title="History">
+          <ContentSection title="Trivial History" pt={6}>
             <Box pt={2}>
               <TimeLine title='Projects' items={news.projects} disableIcons />
             </Box>
