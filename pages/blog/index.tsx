@@ -4,7 +4,26 @@ import Link from "next/link";
 
 import ContentSection from "../../components/ContentSection/ContentSection";
 import Layout from "../../components/Layout";
-import { getAllPosts } from "../../lib/api";
+import { getAllPosts, PostItemType } from "../../lib/api";
+
+function IndexSection(title: string, posts: PostItemType[]) {
+  return (posts.length == 0) ? (
+    <Box pt={2}>
+      TBA
+    </Box>
+  ) : (
+    <ContentSection title={title}>
+      <ul>
+        {posts.map((p, i) => (
+          <Link href={`/blog/${p.id}`}>
+            {p.title}{p.createdDate && ` - ${p.createdDate}`}
+          </Link>
+        ))}
+      </ul>
+    </ContentSection>
+
+  );
+}
 
 /**
  * Display an archive list of all website posts. 
@@ -12,6 +31,7 @@ import { getAllPosts } from "../../lib/api";
 export default function Archive({ posts }: { posts: any[] }) {
   const blogPosts = posts.filter((p) => (p.tag === "blog"));
   const projectPosts = posts.filter((p) => (p.tag === "project"));
+
   return (
     <>
       <Head>
@@ -19,34 +39,8 @@ export default function Archive({ posts }: { posts: any[] }) {
       </Head>
       <Layout>
         <Box pt={2}>
-          <ContentSection title="Blog Posts">
-            <ul>
-              {blogPosts.map((p, i) => (
-                <li key={p.id}>
-                  <Link href={`/blog/${p.id}`}>
-                    {p.createdDate && `${p.createdDate}: `}{p.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </ContentSection>
-          <ContentSection title="Projects">
-            {
-              (projectPosts.length == 0) ? (
-                <Box pt={2}>
-                  TBA
-                </Box>
-              ) : (
-                <ul>
-                  {projectPosts.map((p, i) => (
-                    <li key={p.id}>
-                      <Link href={`/blog/${p.id}`}>{p.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              )
-            }
-          </ContentSection>
+          {IndexSection("Blog Posts", blogPosts)}
+          {IndexSection("Project Stories", projectPosts)}
         </Box>
       </Layout>
     </>
