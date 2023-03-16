@@ -1,12 +1,14 @@
 ---
-title: "[Blog Series] Build Another Website in React/Next.js"
+title: "Blog Series: Build Another Website in React/Next.js"
 tag: blog
 createdDate: "Wed Mar 15 16:05:55 MST 2023"
-modifiedDate: "Thu Mar 16 00:04:53 MST 2023"
+modifiedDate: "Thu Mar 16 09:26:42 MST 2023"
 keywords: react, next.js, CICD, web apps, GitHub
+previewImagePath: /img/arch_blog_nextjs.png
+description: "Why and how to create another website in React/Next.js"
 ---
 
-## [Blog Series] Build Another Blog Website in React/Next.js?
+## Blog Series: Build Another Blog Website in React/Next.js?
 
 ![GitHub Blog Architecture](/img/arch_blog_nextjs.png)
 

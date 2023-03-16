@@ -3,13 +3,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SchoolIcon from '@mui/icons-material/School';
 import { Button, Grid, IconButton, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import Head from 'next/head';
 
 import ContentSection from '../components/ContentSection/ContentSection';
 import Layout from '../components/Layout';
 import MyMarkdown, { MyMarkdownPreview } from '../components/MyMarkdown/MyMarkdown';
 import TimeLine from '../components/TimeLine/TimeLine';
 import { getHomepageData, getNewsData, HomepageDataType, NewsDataType } from '../lib/api';
+import MetaHead from '../lib/seo';
 
 export async function getStaticProps() {
   const news = await getNewsData();
@@ -26,9 +26,10 @@ export default function Index({ news, homepage }: {
 }) {
   return (
     <Layout>
-      <Head>
-        <title>Yet Another CYC</title>
-      </Head>
+      <MetaHead
+        title={homepage.title}
+        description={homepage.about}
+      />
       <Grid container spacing={4} pt={2}>
         <Grid item xs={12} md={8}>
           <ContentSection title="What's New">

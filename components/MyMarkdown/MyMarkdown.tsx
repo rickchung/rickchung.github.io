@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import Markdown from "markdown-to-jsx";
 import Link from "next/link";
+import { ReactNode } from "react";
 
 function MyImg({ ...props }) {
   return (
@@ -8,20 +9,32 @@ function MyImg({ ...props }) {
   );
 }
 
+function MyH1({ children, pageLink }: { children: ReactNode, pageLink?: string }) {
+  return (
+    <Typography component="h1" variant="h5">
+      {pageLink ? (
+        <Link href={pageLink} >{children}</Link>
+      ) : (
+        children
+      )}
+    </Typography>
+  )
+}
+
 /**
  * Render markdown content `children`
  * @returns 
  */
-export default function MyMarkdown({ children }: { children: string }) {
+export default function MyMarkdown({ children, pageLink }: { children: string, pageLink?: string }) {
   const options = {
     overrides: {
       a: {
         component: Link
       },
       h2: {
-        component: Typography,
+        component: MyH1,
         props: {
-          variant: "h5"
+          pageLink: pageLink
         }
       },
       h3: {
