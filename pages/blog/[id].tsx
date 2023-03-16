@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
-import Markdown from "markdown-to-jsx";
 import Head from "next/head";
 
 import Layout from "../../components/Layout";
+import MyMarkdown from "../../components/MyMarkdown/MyMarkdown";
 import { getAllPostIds, getPostById } from "../../lib/api";
 
 /**
@@ -15,8 +15,8 @@ export default function BlogPost({ post }: { post: { [key: string]: string } }) 
         <title>{`${post.title} - Yet Another CYC`}</title>
       </Head>
       <Layout>
-        <Box pt={2}>
-          <Markdown>{post.content}</Markdown>
+        <Box pt={4}>
+          <MyMarkdown>{post.content}</MyMarkdown>
         </Box>
       </Layout>
     </>

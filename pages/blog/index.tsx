@@ -1,8 +1,8 @@
-import { Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
 import Link from "next/link";
 
+import ContentSection from "../../components/ContentSection/ContentSection";
 import Layout from "../../components/Layout";
 import { getAllPosts } from "../../lib/api";
 
@@ -12,29 +12,41 @@ import { getAllPosts } from "../../lib/api";
 export default function Archive({ posts }: { posts: any[] }) {
   const blogPosts = posts.filter((p) => (p.tag === "blog"));
   const projectPosts = posts.filter((p) => (p.tag === "project"));
-
   return (
     <>
       <Head>
         <title>Projects and Blog - Yet Another CYC</title>
       </Head>
       <Layout>
-        <Box pt={3}>
-          <Typography variant="h5" gutterBottom>Projects</Typography>
-          <Divider />
-          <ul>
-            {projectPosts.map((p, i) => (
-              <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
-            ))}
-          </ul>
-          
-          <Typography variant="h5" gutterBottom>Blog Articles</Typography>
-          <Divider />
-          <ul>
-            {blogPosts.map((p, i) => (
-              <li key={p.id}><Link href={`/blog/${p.id}`}>{p.title}</Link></li>
-            ))}
-          </ul>
+        <Box pt={2}>
+          <ContentSection title="Blog Posts">
+            <ul>
+              {blogPosts.map((p, i) => (
+                <li key={p.id}>
+                  <Link href={`/blog/${p.id}`}>
+                    {p.createdDate && `${p.createdDate}: `}{p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </ContentSection>
+          <ContentSection title="Projects">
+            {
+              (projectPosts.length == 0) ? (
+                <Box pt={2}>
+                  TBA
+                </Box>
+              ) : (
+                <ul>
+                  {projectPosts.map((p, i) => (
+                    <li key={p.id}>
+                      <Link href={`/blog/${p.id}`}>{p.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </ContentSection>
         </Box>
       </Layout>
     </>
@@ -45,6 +57,6 @@ export default function Archive({ posts }: { posts: any[] }) {
  * Run at the build time to retrieve all post files from a folder. Ref: https://github.com/vercel/next.js/tree/canary/examples/blog-starter
  */
 export async function getStaticProps() {
-  const posts = await getAllPosts(["title", "tag"]);
+  const posts = await getAllPosts(["title", "tag", "createdDate"]);
   return { props: { posts } };
 };

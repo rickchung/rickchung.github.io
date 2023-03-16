@@ -1,9 +1,11 @@
-import { Box, Divider, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Head from "next/head";
 
-import aboutData from "../sitedata/about.json";
-import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
+import ContentSection from "../components/ContentSection/ContentSection";
 import Layout from "../components/Layout";
+import MyMarkdown from '../components/MyMarkdown/MyMarkdown';
+
+import aboutData from "../sitedata/about.json";
 
 export default function About() {
   return (
@@ -13,15 +15,11 @@ export default function About() {
       </Head>
       <Layout>
         <Box pt={2}>
-          <Typography variant='h5' gutterBottom>
-            About
-          </Typography>
-          <Divider />
-          <Box>
+          <ContentSection title="About">
             <MyMarkdown>
               {aboutData.about}
             </MyMarkdown>
-          </Box>
+          </ContentSection>
         </Box>
       </Layout>
     </>

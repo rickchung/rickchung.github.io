@@ -4,6 +4,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import { Button, Divider, Grid, IconButton, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import ContentSection from '../components/ContentSection/ContentSection';
 import Layout from '../components/Layout';
@@ -31,13 +32,18 @@ export default function Index({ news, homepage }: {
       </Head>
       <Grid container spacing={4} pt={2}>
         <Grid item xs={12} md={8}>
-          <Typography variant='h5' gutterBottom pt={2}>
-            {homepage.title}
-          </Typography>
-          <Divider />
-          <Box pt={2}>
-            <TimeLine title='Projects' items={news.projects} disableIcons />
-          </Box>
+          <ContentSection title="Blog">
+            <Box pt={2}>
+              <MyMarkdown>
+                {homepage.featuredPosts[0]?.content ?? "N/A"}
+              </MyMarkdown>
+            </Box>
+          </ContentSection>
+          <ContentSection title="History">
+            <Box pt={2}>
+              <TimeLine title='Projects' items={news.projects} disableIcons />
+            </Box>
+          </ContentSection>
         </Grid>
 
         {/* Sidebar */}
