@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Markdown from "markdown-to-jsx";
 import Link from "next/link";
 
@@ -8,6 +8,10 @@ function MyImg({ ...props }) {
   );
 }
 
+/**
+ * Render markdown content `children`
+ * @returns 
+ */
 export default function MyMarkdown({ children }: { children: string }) {
   const options = {
     overrides: {
@@ -34,7 +38,38 @@ export default function MyMarkdown({ children }: { children: string }) {
       }
     }
   };
+
   return (
     <Markdown options={options}>{children}</Markdown>
   )
+};
+
+/**
+ * Preview the first several paragraphs of the markdown content `children`
+ */
+export function MyMarkdownPreview({ children, continueLink, previewOnly = 6 }: {
+  children: string,
+  continueLink: string,
+  previewOnly?: number
+}) {
+
+  if (previewOnly > 0) {
+    const split = children.split("\n");
+    children = split.slice(0, previewOnly).join("\n") + "...";
+  }
+
+  return (
+    <Box>
+      <MyMarkdown>
+        {children}
+      </MyMarkdown>
+      <Button
+        variant='contained' sx={{ color: "white" }}
+        component={Link}
+        href={continueLink}
+      >
+        Continue Reading
+      </Button>
+    </Box>
+  );
 };

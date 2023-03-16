@@ -9,7 +9,7 @@ modifiedDate: "Wed Mar 15 2023 16:05:55 MST"
 
 ![GitHub Blog Architecture](/img/arch_blog_nextjs.png)
 
-No doubt there have been numerous websites saying that you have to make a personal website. They always suggest that it will be useful when you are looking for a new job. Or it can be a good place to show off your work. Well, maybe. For me, I have never found my website anything useful, except for showing others that "hey I have a website".
+No doubt there have been numerous websites saying that you have to make a personal website. They always suggest that it will be useful when you are looking for a new job. Or it can be a good place to show off your work. Well, maybe. For me, I have never found my website anything useful, except for showing others that "hey I have a website" (which usually marks the end of your conversation).
 
 Anyway, I'd like to use several posts to talk about how to make a static blog website by React/Next.js. I will show a little theoy about how it works, especially showing an architecture that encompasses all components. You will also see how to build and deploy the website by GitHub Actions (a kind of CICD). The website will finally be hosted on the GitHub Pages just like this one.
 
