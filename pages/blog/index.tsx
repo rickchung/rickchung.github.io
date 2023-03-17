@@ -15,9 +15,11 @@ function IndexSection(title: string, posts: PostItemType[]) {
     <ContentSection title={title}>
       <ul>
         {posts.map((p, i) => (
-          <Link key={`${p.id}-${i}`} href={`/blog/${p.id}`}>
-            {p.title}{p.createdDate && ` - ${p.createdDate}`}
-          </Link>
+          <li key={`${p.id}-${i}`}>
+            <Link href={`/blog/${encodeURI(p.id)}`}>
+              {p.title}{p.createdDate && ` - ${p.createdDate}`}
+            </Link>
+          </li>
         ))}
       </ul>
     </ContentSection>
